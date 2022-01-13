@@ -28,7 +28,7 @@ const NavPanel = () => {
             <li key={link.id}>
               <NavLink
                 to={link.path}
-                exact
+                exact="true"
               >
                 {link.text}
               </NavLink>
