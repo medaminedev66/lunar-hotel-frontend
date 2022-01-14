@@ -25,3 +25,20 @@ code {
     'Courier New',
     monospace;
 }
+
+.room-item {
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.room-item h2 {
+  font-size: 13px;
+}
+
+.room-image {
+  width: 100%;
+  margin-bottom: 1rem;
+}

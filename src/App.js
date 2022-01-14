@@ -1,6 +1,8 @@
+import Home from './pages/Home';
+
 const App = () => (
   <div className="App">
-    <h1>Lunar Hotel</h1>
+    <Home />
   </div>
 );
 
