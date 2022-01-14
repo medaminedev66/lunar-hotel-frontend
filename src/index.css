@@ -25,3 +25,54 @@ code {
     'Courier New',
     monospace;
 }
+
+.room-item {
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+  gap: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.room-item h2 {
+  font-size: 13px;
+}
+
+.room-image {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.rooms {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.home {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.nav {
+  width: 25%;
+  background-color: brown;
+  height: 1000vh;
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav {
+    display: inline-block;
+  }
+
+  .vis {
+    display: none;
+  }
+}
