@@ -1,6 +1,9 @@
+import React from 'react';
+import NavPanel from './components/NavPanel';
+
 const App = () => (
   <div className="App">
-    <h1>Lunar Hotel</h1>
+    <NavPanel />
   </div>
 );
 
