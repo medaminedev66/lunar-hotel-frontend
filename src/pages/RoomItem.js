@@ -13,12 +13,12 @@ function RoomItem() {
       </Row>
       <Row>
         <Col>
-          <h2>Title</h2>
+          <h2>Room number</h2>
         </Col>
       </Row>
       <Row>
         <Col>
-          <p>
+          <p className="fs-6 text fw-light">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
             facilis quidem voluptatem non doloribus voluptatum. Itaque earum,
             recusandae voluptatibus est facere id explicabo officiis dolores eum

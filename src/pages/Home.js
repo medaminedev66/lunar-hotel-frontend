@@ -1,19 +1,31 @@
 import { React, useState } from 'react';
-import { Button, Offcanvas } from 'react-bootstrap';
+import { Offcanvas } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import RoomItem from './RoomItem';
 
 function Home() {
+  const rooms = [1, 2, 3, 4, 5];
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Humberger
-      </Button>
-      <RoomItem />
-
+      <div className="Container">
+        <div className="vis">
+          <FontAwesomeIcon icon={faBars} onClick={handleShow} />
+        </div>
+        <div className="home">
+          <div className="nav">Nav</div>
+          <div className="rooms">
+            {rooms.map((e) => (
+              <RoomItem key={e} />
+            ))}
+          </div>
+        </div>
+      </div>
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Offcanvas</Offcanvas.Title>
