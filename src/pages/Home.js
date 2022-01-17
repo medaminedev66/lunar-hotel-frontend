@@ -1,7 +1,6 @@
 import { React, useState } from 'react';
 import { Offcanvas } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import RoomItem from '../components/RoomItem';
 import NavPanel from '../components/NavPanel';
