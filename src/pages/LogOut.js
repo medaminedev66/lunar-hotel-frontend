@@ -22,7 +22,7 @@ const LogOut = () => {
           <input className="input" name="password_confirmation" placeholder="Password Confirmation" {...register('password_confirmation', { required: true })} />
           <input className="input" type="submit" value="Sign Up" />
         </form>
-        <Link className="login-link" to="/login">Log In</Link>
+        <Link className="login-link" to="/users/login">Log In</Link>
       </div>
     </div>
   );

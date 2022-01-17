@@ -6,7 +6,7 @@ import authReducer from './auth';
 
 const reducer = combineReducers({
   roomsReducer,
-  authReducer,
+  auth: authReducer,
 });
 
 const store = createStore(reducer, applyMiddleware(logger, thunk));

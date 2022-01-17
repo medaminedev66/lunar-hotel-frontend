@@ -19,7 +19,7 @@ const LogIn = () => {
           <input className="input" name="password" placeholder="Password" {...register('password', { required: true })} />
           <input className="input" type="submit" value="Log In" />
         </form>
-        <Link to="/signup">Sign Up</Link>
+        <Link to="/users/signup">Sign Up</Link>
       </div>
     </div>
   );
