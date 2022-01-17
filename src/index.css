@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family:
@@ -56,15 +60,32 @@ code {
 
 .home {
   display: flex;
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
 .nav {
   width: 25%;
+  min-width: 300px;
   background-color: brown;
-  height: 1000vh;
+  height: 100vh;
   display: none;
+}
+
+.navLink {
+  color: #f1f1f1;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.navLink:hover {
+  color: #888;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 @media only screen and (min-width: 768px) {
