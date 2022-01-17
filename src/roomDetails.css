@@ -1,0 +1,76 @@
+body {
+  background-color: #ccc;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: darkred;
+  font-size: 30px;
+  margin-bottom: 4rem;
+}
+
+a:hover {
+  color: brown;
+}
+
+.upperCase {
+  text-transform: uppercase;
+}
+
+main {
+  height: 100vh;
+}
+
+.roomImage {
+  width: 100%;
+  height: 100%;
+}
+
+.displayRoom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+  column-gap: 2rem;
+  background-color: #fff;
+}
+
+.displayTwo {
+  width: 60%;
+}
+
+.displayOne,
+.displayThree {
+  width: 20%;
+}
+
+.displayColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.marginFive {
+  margin-top: 10rem;
+}
+
+.navPanel {
+  height: 100vh;
+  width: 25%;
+  min-width: 200px;
+  background-color: brown;
+  display: none;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 3rem;
+}
