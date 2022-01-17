@@ -1,16 +1,40 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Provider } from 'react-redux';
+import {
+  HashRouter as Router, Route, Routes,
+} from 'react-router-dom';
 import Home from './pages/Home';
-import store from './redux/configureStore';
+import SignUp from './pages/SignUp';
+import LogIn from './pages/LogIn';
+import Auth, { AuthRoute } from './components/Auth';
 
 const App = () => (
-  <Provider store={store}>
-    <BrowserRouter>
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
-  </Provider>
+  <Router basename={process.env.PUBLIC_URL}>
+    <Routes>
+      <Route
+        path="/"
+        element={(
+          <Auth>
+            <Home />
+          </Auth>
+        )}
+      />
+      <Route
+        path="/users/login"
+        element={(
+          <AuthRoute>
+            <LogIn />
+          </AuthRoute>
+        )}
+      />
+      <Route
+        path="/users/signup"
+        element={(
+          <AuthRoute>
+            <SignUp />
+          </AuthRoute>
+        )}
+      />
+    </Routes>
+  </Router>
 );
 
 export default App;
