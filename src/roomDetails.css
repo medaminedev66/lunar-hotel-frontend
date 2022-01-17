@@ -75,6 +75,20 @@ main {
   row-gap: 3rem;
 }
 
+.buttonConfig {
+  background-color: darkred;
+  border: none;
+  padding: 5px 10px;
+  color: #f1f1f1;
+  border-radius: 20px;
+  margin-top: 2rem;
+}
+
+.buttonConfig:hover {
+  background-color: brown;
+  color: #fff;
+}
+
 @media only screen and (min-width: 768px) {
   .details {
     flex-direction: row;
