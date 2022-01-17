@@ -2,9 +2,11 @@ import { applyMiddleware, combineReducers, createStore } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import roomsReducer from './rooms/rooms';
+import authReducer from './auth';
 
 const reducer = combineReducers({
   roomsReducer,
+  authReducer,
 });
 
 const store = createStore(reducer, applyMiddleware(logger, thunk));
