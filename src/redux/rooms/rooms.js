@@ -2,8 +2,7 @@ const initialState = [];
 const FETCH_DATA = 'rooms/FETCH_DATA';
 const UPDATE_STATE = 'rooms/UPDATE_STATE';
 
-
-export const roomsReducer = (state = initialState, action) => {
+const roomsReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_DATA:
       return action.payload;
@@ -13,3 +12,5 @@ export const roomsReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+export default roomsReducer;
