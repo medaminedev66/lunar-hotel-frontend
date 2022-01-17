@@ -1,8 +1,8 @@
-import * as api from '../api/api';
+import * as api from '../../api/api';
 
 export const loadCurrentUser = (state) => state.auth.currentUser;
 
-const LOAD_CURRENT_USER = 'auth/curren_user';
+const LOAD_CURRENT_USER = 'auth/current_user';
 
 export const setCurrentUser = (payload) => ({
   type: LOAD_CURRENT_USER,
@@ -27,10 +27,7 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case LOAD_CURRENT_USER:
-      return {
-        ...state,
-        currentUser: action.payload,
-      };
+      return action.payload;
     default:
       return state;
   }
