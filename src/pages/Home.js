@@ -3,7 +3,8 @@ import { Offcanvas } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import RoomItem from './RoomItem';
+import RoomItem from '../components/RoomItem';
+import NavPanel from '../components/NavPanel';
 
 function Home() {
   const rooms = [1, 2, 3, 4, 5];
@@ -18,7 +19,7 @@ function Home() {
           <FontAwesomeIcon icon={faBars} onClick={handleShow} />
         </div>
         <div className="home">
-          <div className="nav">Nav</div>
+          <div className="nav"><NavPanel /></div>
           <div className="rooms">
             {rooms.map((e) => (
               <RoomItem key={e} />
