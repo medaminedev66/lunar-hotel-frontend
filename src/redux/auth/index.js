@@ -19,6 +19,11 @@ export const logout = () => async (dispatch) => {
   dispatch(setCurrentUser(null));
 };
 
+export const signup = (payload) => async (dispatch) => {
+  const response = await api.signup(payload);
+  dispatch(setCurrentUser(response));
+};
+
 const initialState = {
   currentUser: null,
   token: null,
