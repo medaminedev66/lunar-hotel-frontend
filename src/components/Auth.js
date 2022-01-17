@@ -5,10 +5,10 @@ import { loadCurrentUser } from '../redux/auth';
 
 const Auth = ({ children }) => {
   const location = useLocation();
-  const { isAuthenticated } = useSelector(loadCurrentUser);
+  const isAuthenticated = useSelector(loadCurrentUser);
 
-  if (isAuthenticated) {
-    return <Navigate to="/login" state={{ from: location }} />;
+  if (!isAuthenticated) {
+    return <Navigate to="/users/login" state={{ from: location }} />;
   }
 
   return children;
@@ -16,7 +16,7 @@ const Auth = ({ children }) => {
 
 export const AuthRoute = ({ children }) => {
   const location = useLocation();
-  const { isAuthenticated } = useSelector(loadCurrentUser);
+  const isAuthenticated = useSelector(loadCurrentUser);
 
   if (isAuthenticated) {
     const { from } = location.state || { from: { pathname: '/' } };
