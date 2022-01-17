@@ -2,14 +2,14 @@
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { login } from '../redux/auth';
+import { signup } from '../redux/auth';
 
-const LogOut = () => {
+const SignUp = () => {
   const dispatch = useDispatch();
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
-    dispatch(login(data));
+    dispatch(signup(data));
   };
 
   return (
@@ -28,4 +28,4 @@ const LogOut = () => {
   );
 };
 
-export default LogOut;
+export default SignUp;
