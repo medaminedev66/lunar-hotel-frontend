@@ -20,7 +20,7 @@ const NavPanel = () => {
     },
     {
       id: 4,
-      path: '/room-details',
+      path: '/room_details',
       text: 'Room Details',
     },
   ];
