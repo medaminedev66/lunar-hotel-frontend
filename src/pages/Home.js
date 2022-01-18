@@ -1,13 +1,21 @@
 import { React, useState } from 'react';
-import { useSelector } from 'react-redux';
+// import { useSelector, useDispatch } from 'react-redux';
 import { Offcanvas } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import RoomItem from '../components/RoomItem';
 import NavPanel from '../components/NavPanel';
+// import { getRooms } from '../api/api';
 
 function Home() {
-  const rooms = useSelector((state) => state.countriesReducer);
+  const rooms = [1, 2, 3, 4];
+  // const rr = useSelector((state) => state.roomsReducer);
+  // const dispatch = useDispatch();
+
+  // useEffect(() => {
+  //   dispatch(getRooms());
+  // }, [dispatch]);
+
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);

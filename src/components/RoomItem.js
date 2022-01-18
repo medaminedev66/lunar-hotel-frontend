@@ -3,8 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'react-bootstrap/Image';
 import image from '../images/pexels-pixabay-164595.jpg';
 
-function RoomItem() { 
-
+function RoomItem() {
   return (
     <Container className="room-item">
       <Row>
