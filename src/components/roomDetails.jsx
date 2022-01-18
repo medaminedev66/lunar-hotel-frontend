@@ -6,7 +6,7 @@ import { faArrowRight, faBars, faScrewdriver } from '@fortawesome/free-solid-svg
 import NavPanel from './NavPanel';
 import Image from '../images/pexels-pixabay-164595.jpg';
 
-function RoomDetails() {
+const RoomDetails = () => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -69,6 +69,6 @@ function RoomDetails() {
       </Offcanvas>
     </main>
   );
-}
+};
 
 export default RoomDetails;
