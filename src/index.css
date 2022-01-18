@@ -74,11 +74,11 @@ code {
 }
 
 .error {
-  border: 2px solid #FF6565;
+  border: 2px solid #ff6565;
 }
 
 .error-message {
-  color: #FF6565;
+  color: #ff6565;
   padding: 0.5em 0.2em 1em 0.2em;
   height: 1em;
   font-size: 0.8em;
