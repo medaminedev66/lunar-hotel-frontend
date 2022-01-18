@@ -1,3 +1,9 @@
+/* stylelint-disable -- Stylint doesn't recognise tailwind rules */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* stylelint-enable */
+
 body {
   margin: 0;
   font-family:
