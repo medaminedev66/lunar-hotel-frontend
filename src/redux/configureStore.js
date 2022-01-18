@@ -7,7 +7,7 @@ import { roomsReducer } from './rooms/rooms';
 import authReducer from './auth';
 
 const reducer = combineReducers({
-  roomsReducer,
+  rooms: roomsReducer,
   auth: authReducer,
 });
 

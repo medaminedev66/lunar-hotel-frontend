@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import SignUp from './pages/SignUp';
 import LogIn from './pages/LogIn';
 import Auth, { AuthRoute } from './components/Auth';
+import RoomsPage from './pages/RoomsPage';
 
 const App = () => (
   <Router basename={process.env.PUBLIC_URL}>
@@ -13,10 +14,11 @@ const App = () => (
         path="/"
         element={(
           <Auth>
-            <Home />
+            <RoomsPage />
           </Auth>
         )}
       />
+      <Route path="/home" element={<Home />} />
       <Route
         path="/users/login"
         element={(
