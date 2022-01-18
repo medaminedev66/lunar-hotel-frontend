@@ -3,7 +3,7 @@ import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import { persistReducer, persistStore } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import roomsReducer from './rooms/rooms';
+import { roomsReducer } from './rooms/rooms';
 import authReducer from './auth';
 
 const reducer = combineReducers({
