@@ -26,11 +26,16 @@ function Home() {
           <FontAwesomeIcon icon={faBars} onClick={handleShow} />
         </div>
         <div className="home">
-          <div className="nav"><NavPanel /></div>
-          <div className="rooms">
-            {rooms.map((e) => (
-              <RoomItem key={e} />
-            ))}
+          <div className="nav">
+            <NavPanel />
+          </div>
+          <div className="main">
+            <h1>Lunar&apos;s rooms</h1>
+            <div className="rooms">
+              {rooms.map((e) => (
+                <RoomItem key={e} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
