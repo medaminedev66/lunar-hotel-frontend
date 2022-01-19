@@ -7,6 +7,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import RoomItem from '../components/RoomItem';
 import NavPanel from '../components/NavPanel';
 import { getRooms } from '../redux/rooms/rooms';
+import lunar from '../images/lunar.png';
 
 function Home() {
   const rooms = [1, 2, 3, 4];
@@ -28,6 +29,7 @@ function Home() {
         </div>
         <div className="home">
           <div className="nav">
+            <img src={lunar} className="lunar-logo" alt="" />
             <NavPanel />
           </div>
           <div className="main">
