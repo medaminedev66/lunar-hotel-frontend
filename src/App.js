@@ -43,7 +43,7 @@ const App = () => (
           </Auth>
 
         )}
-        />
+      />
       <Route
         path="/create_room"
         element={(

@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import '../roomDetails.css';
 import { Offcanvas } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faBars, faScrewdriver } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import NavPanel from './NavPanel';
 import Image from '../images/pexels-pixabay-164595.jpg';
+import lunar from '../images/lunar.png';
 
 const RoomDetails = () => {
   const [show, setShow] = useState(false);
@@ -24,15 +25,16 @@ const RoomDetails = () => {
         <FontAwesomeIcon icon={faBars} onClick={handleShow} />
       </div>
       <section className="displayRoom">
-        <div className="navPanel">
+        <div className="nav">
+          <img src={lunar} className="lunar-logo" alt="" />
           <NavPanel />
         </div>
-        <div className="details marginFive">
+        <div className="details marginFive leftMargin">
           <div className="displayTwo">
             <img className="roomImage" src={Image} alt="hotel room" />
           </div>
           <div className="displayThree">
-            <h1>{roomsDb.name}</h1>
+            <h1 className="upperCase">{roomsDb.name}</h1>
             <p>
               City:
               {roomsDb.city}
@@ -51,9 +53,7 @@ const RoomDetails = () => {
               ))}
             </ul>
             <button type="button" className="buttonConfig">
-              <FontAwesomeIcon icon={faScrewdriver} className="fs-5 me-2" />
-              Configure
-              <FontAwesomeIcon icon={faArrowRight} className="fs-5 mx-2" />
+              Add Reservation
             </button>
           </div>
         </div>
