@@ -34,6 +34,7 @@ function Home() {
           </div>
           <div className="main">
             <h1>Lunar&apos;s rooms</h1>
+            <h2>Please select a room for reservation</h2>
             <div className="rooms">
               {rooms.map((e) => (
                 <NavLink to="/room" exact="true" key={e}>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Squada+One&display=swap');
+
 * {
   text-decoration: none;
   list-style: none;
@@ -73,11 +75,21 @@ a {
 }
 
 .main h1 {
+  font-family: 'Barlow', sans-serif;
+  color: #253439;
   margin-top: 5rem;
-  margin-bottom: 2rem;
   text-align: center;
   font-size: 60px;
   text-transform: uppercase;
+}
+
+.main h2 {
+  font-family: 'Barlow', sans-serif;
+  color: #253439;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .rooms {
