@@ -25,7 +25,7 @@ const NavPanel = () => {
       <nav>
         <ul>
           {links.map((link) => (
-            <li key={link.id}>
+            <li key={link.id} className="nav-link">
               <NavLink
                 to={link.path}
                 exact="true"
