@@ -1,4 +1,4 @@
-import { createRoom } from '../../api/api';
+import * as api from '../../api/api';
 
 const initialState = [];
 const FETCH_DATA = 'rooms/FETCH_DATA';
@@ -11,11 +11,21 @@ export const createNewRoom = (payload) => ({
 });
 
 export const addRoom = (payload) => async (dispatch) => {
-  const response = await createRoom(payload);
+  const response = await api.createRoom(payload);
   dispatch(createNewRoom(response));
 };
 
-const roomsReducer = (state = initialState, action) => {
+export const dispatchRooms = (payload) => ({
+  type: FETCH_DATA,
+  payload,
+});
+
+export const getRooms = (payload) => async (dispatch) => {
+  const response = await api.getRooms(payload);
+  dispatch(dispatchRooms(response));
+};
+
+export const roomsReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_DATA:
       return action.payload;
@@ -27,5 +37,3 @@ const roomsReducer = (state = initialState, action) => {
       return state;
   }
 };
-
-export default roomsReducer;
