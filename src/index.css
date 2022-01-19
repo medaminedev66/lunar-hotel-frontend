@@ -1,3 +1,7 @@
+html {
+  height: 100vh;
+}
+
 body {
   margin: 0;
   font-family:
@@ -47,32 +51,37 @@ code {
   margin-bottom: 1rem;
 }
 
+.home {
+  position: relative;
+  display: flex;
+}
+
 .rooms {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.home {
-  display: flex;
-  height: 100vh;
   width: 100%;
 }
 
 .nav {
-  width: 25%;
+  position: fixed;
+  height: 100%;
   background-color: brown;
-  height: 1000vh;
   display: none;
 }
 
 @media only screen and (min-width: 768px) {
   .nav {
     display: inline-block;
+    width: 250px;
   }
 
   .vis {
     display: none;
+  }
+
+  .rooms {
+    margin-left: 250px;
   }
 }
