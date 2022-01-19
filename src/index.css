@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Squada+One&display=swap');
+
+* {
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  height: 100vh;
+}
+/* stylelint-disable -- Stylint doesn't recognise tailwind rules */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* stylelint-enable */
+
 body {
   margin: 0;
   font-family:
@@ -26,8 +42,12 @@ code {
     monospace;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .room-item {
-  border: 1px solid;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,6 +56,8 @@ code {
   gap: 1rem;
   margin: 0.5rem;
   padding: 0.5rem;
+  box-shadow: 0 1px 8px rgb(224, 224, 224);
+  border-radius: 5px;
 }
 
 .room-item h2 {
@@ -45,6 +67,34 @@ code {
 .room-image {
   width: 100%;
   margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.home {
+  position: relative;
+  display: flex;
+}
+
+.main {
+  width: 100%;
+}
+
+.main h1 {
+  font-family: 'Barlow', sans-serif;
+  color: #253439;
+  margin-top: 5rem;
+  text-align: center;
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+.main h2 {
+  font-family: 'Barlow', sans-serif;
+  color: #253439;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .rooms {
@@ -52,27 +102,51 @@ code {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.home {
-  display: flex;
-  height: 100vh;
   width: 100%;
 }
 
 .nav {
-  width: 25%;
-  background-color: brown;
-  height: 1000vh;
+  position: fixed;
+  height: 100%;
+  background-color: #253439;
   display: none;
+}
+
+.nav-link {
+  margin: 0.5rem 0;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.error {
+  border: 2px solid #ff6565;
+}
+
+.error-message {
+  color: #ff6565;
+  padding: 0.5em 0.2em 1em 0.2em;
+  height: 1em;
+  font-size: 0.8em;
 }
 
 @media only screen and (min-width: 768px) {
   .nav {
-    display: inline-block;
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .lunar-logo {
+    width: 100%;
   }
 
   .vis {
     display: none;
+  }
+
+  .main {
+    margin-left: 250px;
   }
 }

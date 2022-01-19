@@ -8,7 +8,7 @@ function RoomItem() {
     <Container className="room-item">
       <Row>
         <Col>
-          <Image className="room-image" src={image} alt="" />
+          <Image className="room-image" src={image} alt="hotel room" />
         </Col>
       </Row>
       <Row>

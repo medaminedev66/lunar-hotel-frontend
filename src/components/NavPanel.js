@@ -18,6 +18,11 @@ const NavPanel = () => {
       path: '/create_room',
       text: 'Create Room',
     },
+    {
+      id: 4,
+      path: '/room_details',
+      text: 'Room Details',
+    },
   ];
 
   return (
@@ -25,11 +30,8 @@ const NavPanel = () => {
       <nav>
         <ul>
           {links.map((link) => (
-            <li key={link.id}>
-              <NavLink
-                to={link.path}
-                exact="true"
-              >
+            <li key={link.id} className="nav-link">
+              <NavLink to={link.path} exact="true">
                 {link.text}
               </NavLink>
             </li>

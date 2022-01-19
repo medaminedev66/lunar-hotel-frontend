@@ -1,0 +1,94 @@
+.upperCase {
+  text-transform: uppercase;
+}
+
+.contain {
+  height: 100vh;
+  width: 100%;
+}
+
+.roomImage {
+  width: 93%;
+  height: 100%;
+  box-shadow: 0 1px 8px rgb(224, 224, 224);
+  border-radius: 5px;
+}
+
+.displayRoom {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+  column-gap: 2rem;
+  background-color: #fff;
+}
+
+.displayTwo {
+  width: 100%;
+  padding-left: 3rem;
+}
+
+.displayThree {
+  width: 100%;
+  padding-left: 3rem;
+}
+
+.displayColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.marginFive {
+  margin-top: 5rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 3rem;
+  row-gap: 3rem;
+}
+
+.buttonConfig {
+  background-color: darkred;
+  border: none;
+  padding: 15px 15px;
+  color: #f1f1f1;
+  border-radius: 20px;
+  margin-top: 2rem;
+  box-shadow: 0 1px 8px rgb(224, 224, 224);
+}
+
+.buttonConfig:hover {
+  background-color: brown;
+  color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  .vis {
+    display: none;
+  }
+
+  .leftMargin {
+    margin-left: 250px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .details {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .displayTwo {
+    width: 70%;
+  }
+
+  .displayThree {
+    width: 30%;
+  }
+}
