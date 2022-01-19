@@ -40,7 +40,7 @@ const RoomDetails = () => {
               {roomsDb.city}
             </p>
             <p>
-              Room rate: $
+              Room rate: $z
               {roomsDb.rate}
             </p>
             <p>
