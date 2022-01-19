@@ -18,6 +18,11 @@ const NavPanel = () => {
       path: '/create_room',
       text: 'Create Room',
     },
+    {
+      id: 4,
+      path: '/room_details',
+      text: 'Room Details',
+    },
   ];
 
   return (
