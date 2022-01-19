@@ -8,6 +8,11 @@
 html {
   height: 100vh;
 }
+/* stylelint-disable -- Stylint doesn't recognise tailwind rules */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* stylelint-enable */
 
 body {
   margin: 0;
@@ -111,6 +116,17 @@ a {
   color: white;
   font-size: 18px;
   font-weight: 600;
+}
+
+.error {
+  border: 2px solid #ff6565;
+}
+
+.error-message {
+  color: #ff6565;
+  padding: 0.5em 0.2em 1em 0.2em;
+  height: 1em;
+  font-size: 0.8em;
 }
 
 @media only screen and (min-width: 768px) {
