@@ -50,16 +50,15 @@ export const deleteAReservation = (payload) => async (dispatch) => {
 const initialState = [];
 
 const reservationsReducer = (state = initialState, action) => {
-  let deletedItem = state.filter(id => id !== payload); 
   switch (action.type) {
     case CREATE_RESERVATION:
-      return action.payload;
+      return [...state, action.payload];
     case GET_SINGLE_RESERVATION:
       return action.payload;
     case GET_ALL_RESERVATION:
-      return action.payload;
+      return [...state, action.payload];
     case DELETE_RESERVATION:
-      return action.payload
+      return [...state, state.filter((r) => r.id !== action.payload)];
     default:
       return state;
   }
