@@ -73,6 +73,17 @@ code {
   display: none;
 }
 
+.error {
+  border: 2px solid #ff6565;
+}
+
+.error-message {
+  color: #ff6565;
+  padding: 0.5em 0.2em 1em 0.2em;
+  height: 1em;
+  font-size: 0.8em;
+}
+
 @media only screen and (min-width: 768px) {
   .nav {
     display: inline-block;
