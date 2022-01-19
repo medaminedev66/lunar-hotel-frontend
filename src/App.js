@@ -5,7 +5,8 @@ import Home from './pages/Home';
 import SignUp from './pages/SignUp';
 import LogIn from './pages/LogIn';
 import Auth, { AuthRoute } from './components/Auth';
-import RoomDetails from './components/roomDetails';
+import RoomDetails from './components/RoomDetails';
+import CreateRoom from './pages/CreateRoom';
 
 const App = () => (
   <Router basename={process.env.PUBLIC_URL}>
@@ -39,6 +40,15 @@ const App = () => (
         element={(
           <Auth>
             <RoomDetails />
+          </Auth>
+
+        )}
+        />
+      <Route
+        path="/create_room"
+        element={(
+          <Auth>
+            <CreateRoom />
           </Auth>
         )}
       />
