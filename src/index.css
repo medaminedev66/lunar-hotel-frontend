@@ -41,7 +41,6 @@ a {
 }
 
 .room-item {
-  border: 1px solid;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,6 +49,8 @@ a {
   gap: 1rem;
   margin: 0.5rem;
   padding: 0.5rem;
+  box-shadow: 0 1px 8px rgb(224, 224, 224);
+  border-radius: 5px;
 }
 
 .room-item h2 {
