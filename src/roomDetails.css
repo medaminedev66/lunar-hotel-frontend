@@ -1,52 +1,38 @@
-body {
-  background-color: #ccc;
-}
-
-h1 {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-  color: darkred;
-  font-size: 30px;
-  margin-bottom: 4rem;
-}
-
-a:hover {
-  color: brown;
-}
-
 .upperCase {
   text-transform: uppercase;
 }
 
-main {
+.contain {
   height: 100vh;
+  width: 100%;
 }
 
 .roomImage {
-  width: 100%;
+  width: 93%;
   height: 100%;
+  box-shadow: 0 1px 8px rgb(224, 224, 224);
+  border-radius: 5px;
 }
 
 .displayRoom {
+  position: relative;
   display: flex;
-  align-items: flex-start;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: flex-start;
   height: 100%;
   column-gap: 2rem;
   background-color: #fff;
 }
 
 .displayTwo {
-  width: 60%;
+  width: 100%;
+  padding-left: 3rem;
 }
 
-.displayOne,
 .displayThree {
-  width: 20%;
+  width: 100%;
+  padding-left: 3rem;
 }
 
 .displayColumn {
@@ -56,32 +42,25 @@ main {
 }
 
 .marginFive {
-  margin-top: 10rem;
-}
-
-.navPanel {
-  height: 100vh;
-  width: 25%;
-  min-width: 200px;
-  background-color: brown;
-  display: none;
+  margin-top: 5rem;
 }
 
 .details {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  padding-bottom: 3rem;
   row-gap: 3rem;
 }
 
 .buttonConfig {
   background-color: darkred;
   border: none;
-  padding: 5px 10px;
+  padding: 15px 15px;
   color: #f1f1f1;
   border-radius: 20px;
   margin-top: 2rem;
+  box-shadow: 0 1px 8px rgb(224, 224, 224);
 }
 
 .buttonConfig:hover {
@@ -90,15 +69,26 @@ main {
 }
 
 @media only screen and (min-width: 768px) {
-  .details {
-    flex-direction: row;
-  }
-
-  .navPanel {
-    display: inline-block;
-  }
-
   .vis {
     display: none;
+  }
+
+  .leftMargin {
+    margin-left: 250px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .details {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .displayTwo {
+    width: 70%;
+  }
+
+  .displayThree {
+    width: 30%;
   }
 }
