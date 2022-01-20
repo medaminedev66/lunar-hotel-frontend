@@ -119,6 +119,10 @@ a {
   font-weight: 600;
 }
 
+.upperCase {
+  text-transform: uppercase;
+}
+
 .error {
   border: 2px solid #ff6565;
 }
