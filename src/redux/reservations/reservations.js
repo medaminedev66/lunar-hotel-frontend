@@ -58,7 +58,7 @@ const reservationsReducer = (state = initialState, action) => {
     case GET_ALL_RESERVATION:
       return [...state, action.payload];
     case DELETE_RESERVATION:
-      return [...state, state.filter((r) => r.id !== action.payload)];
+      return state.filter((r) => r.id !== action.payload);
     default:
       return state;
   }
