@@ -54,7 +54,7 @@ const RoomDetails = () => {
               ))}
             </ul>
             <button type="button" className="buttonConfig upperClass">
-              <NavLink to="/reservations" exact="true">
+              <NavLink to="/add_reservation" exact="true">
                 Add Reservation
               </NavLink>
             </button>

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import './reservation.css';
+import './addReservation.css';
 import { Offcanvas } from 'react-bootstrap';
 
-const Reservations = () => {
+const AddReservation = () => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -42,4 +42,4 @@ const Reservations = () => {
   );
 };
 
-export default Reservations;
+export default AddReservation;
