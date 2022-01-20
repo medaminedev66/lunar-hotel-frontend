@@ -19,7 +19,7 @@ export const AuthRoute = ({ children }) => {
   const isAuthenticated = useSelector(loadCurrentUser);
 
   if (isAuthenticated) {
-    const { from } = location.state || { from: { pathname: '/' } };
+    const from = location.state?.from || { pathname: '/' };
     return <Navigate to={from} />;
   }
 
