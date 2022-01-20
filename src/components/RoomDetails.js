@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import '../roomDetails.css';
 import { Offcanvas } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -52,8 +53,10 @@ const RoomDetails = () => {
                 <li key={amenity}>{amenity}</li>
               ))}
             </ul>
-            <button type="button" className="buttonConfig">
-              Add Reservation
+            <button type="button" className="buttonConfig upperClass">
+              <NavLink to="/reservations" exact="true">
+                Add Reservation
+              </NavLink>
             </button>
           </div>
         </div>
