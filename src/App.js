@@ -1,13 +1,11 @@
-import {
-  HashRouter as Router, Route, Routes,
-} from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import SignUp from './pages/SignUp';
 import LogIn from './pages/LogIn';
 import Auth, { AuthRoute } from './components/Auth';
 import RoomDetails from './components/RoomDetails';
 import CreateRoom from './pages/CreateRoom';
-import MyReservation from '.pages/MyReservation'
+import MyReservation from './pages/MyReservations';
 
 const App = () => (
   <Router basename={process.env.PUBLIC_URL}>
@@ -42,7 +40,6 @@ const App = () => (
           <Auth>
             <RoomDetails />
           </Auth>
-
         )}
       />
       <Route
@@ -50,6 +47,14 @@ const App = () => (
         element={(
           <Auth>
             <CreateRoom />
+          </Auth>
+        )}
+      />
+      <Route
+        path="/reservations"
+        element={(
+          <Auth>
+            <MyReservation />
           </Auth>
         )}
       />
