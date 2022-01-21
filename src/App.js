@@ -7,6 +7,7 @@ import LogIn from './pages/LogIn';
 import Auth, { AuthRoute } from './components/Auth';
 import RoomDetails from './components/RoomDetails';
 import CreateRoom from './pages/CreateRoom';
+import MyReservation from '.pages/MyReservation'
 
 const App = () => (
   <Router basename={process.env.PUBLIC_URL}>
