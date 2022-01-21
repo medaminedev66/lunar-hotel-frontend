@@ -1,26 +1,27 @@
 import React from 'react';
+import '../pages/reservations.css';
 
 function Reservation() {
   return (
     <div className="reservation">
-      <div className="col-1">
-        <div className="check-in">
-          <h3>check in:</h3>
+      <div className="co1">
+        <div className="check-in tex">
+          <h3>Check-in:</h3>
           <span>12/12/2012</span>
         </div>
-        <div className="check-out">
-          <h3>check out:</h3>
+        <div className="check-out tex">
+          <h3>Check-out:</h3>
           <span>12/12/2012</span>
         </div>
-        <div className="Nights">
+        <div className="Nights tex">
           <h3>Nights:</h3>
           <span>3</span>
         </div>
       </div>
-      <div className="col-2">
-        <div className="room-id">
+      <div className="co2">
+        <div className="room-id tex">
           <h3>Room-id:</h3>
-          <span>1258N</span>
+          <span>1268N</span>
         </div>
         <button type="button" className="btn btn-danger">
           Cancel

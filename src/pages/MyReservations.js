@@ -2,6 +2,7 @@ import React from 'react';
 import lunar from '../images/lunar.png';
 import NavPanel from '../components/NavPanel';
 import Reservation from '../components/Reservation';
+import './reservations.css';
 
 function MyReservation() {
   const reservations = [1, 2, 3, 4, 5];
@@ -17,7 +18,7 @@ function MyReservation() {
           You are able to cancel the reservation before 24 hours of the
           reservation date
         </h2>
-        <div className="rooms">
+        <div className="reservations">
           {reservations.map((reservation) => (
             <Reservation key={reservation} />
           ))}

@@ -1,0 +1,25 @@
+.reservations {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 4rem;
+}
+
+.reservation {
+  display: flex;
+  width: 100%;
+  border: 1px solid;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.tex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.tex span {
+  margin-left: 0.8rem;
+}
