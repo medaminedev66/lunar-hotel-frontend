@@ -1,14 +1,16 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { login } from '../redux/auth';
 
 const LogIn = () => {
   const dispatch = useDispatch();
   const { register, handleSubmit } = useForm();
+  const navigate = useNavigate();
   const onSubmit = (data) => {
     dispatch(login(data));
+    navigate('/');
   };
 
   return (

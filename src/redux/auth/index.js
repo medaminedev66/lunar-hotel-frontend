@@ -1,8 +1,8 @@
 import * as api from '../../api/api';
 
-export const loadCurrentUser = (state) => state.auth.currentUser;
+export const loadCurrentUser = (state) => state.authReducer.currentUser;
 
-const LOAD_CURRENT_USER = 'auth/current_user';
+const LOAD_CURRENT_USER = 'auth/LOAD_CURRENT_USER';
 
 export const setCurrentUser = (payload) => ({
   type: LOAD_CURRENT_USER,
