@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import * as api from '../api/api';
 
 const NavPanel = () => {
+  const [currentUser, setCurrentUser] = useState(undefined);
+
+  useEffect(() => {
+    const user = api.loggedInUser();
+
+    if (user) {
+      setCurrentUser(user);
+    }
+  }, []);
+
+  const logOut = () => {
+    api.logout();
+  };
+
   const links = [
     {
       id: 1,
@@ -36,7 +51,15 @@ const NavPanel = () => {
               </NavLink>
             </li>
           ))}
+          {currentUser && (
+          <li>
+            <a href="/" className="nav-link" onClick={logOut}>
+              Log Out
+            </a>
+          </li>
+          )}
         </ul>
+
       </nav>
     </section>
   );
