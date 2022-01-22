@@ -1,9 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'react-bootstrap/Image';
 import image from '../images/pexels-pixabay-164595.jpg';
 
-function RoomItem() {
+function RoomItem({ room }) {
+  const { name } = room;
   return (
     <Container className="room-item">
       <Row>
@@ -13,7 +15,7 @@ function RoomItem() {
       </Row>
       <Row>
         <Col>
-          <h2>Room number</h2>
+          <h2>{name}</h2>
         </Col>
       </Row>
       <Row>
@@ -29,5 +31,10 @@ function RoomItem() {
     </Container>
   );
 }
+
+RoomItem.propTypes = {
+  room: PropTypes.instanceOf(Object).isRequired,
+  name: PropTypes.string.isRequired,
+};
 
 export default RoomItem;
