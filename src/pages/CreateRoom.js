@@ -21,7 +21,7 @@ const validationSchema = Yup.object().shape({
     .min(10, '*Rate must be $10 or greater')
     .required('*Rate is required'),
 
-  roomType: Yup.string()
+  room_type: Yup.string()
     .required('*Room Type is required'),
 
   amenities: Yup.string()
@@ -41,14 +41,14 @@ const CreateRoom = () => {
             name: '',
             city: '',
             rate: 0,
-            roomType: '',
+            room_type: '',
             amenities: '',
             picture: '',
           }}
           validationSchema={validationSchema}
           onSubmit={(values, { setSubmitting, resetForm }) => {
-            dispatch(addRoom(values));
             setSubmitting(true);
+            dispatch(addRoom(values));
             resetForm();
             setSubmitting(false);
           }}
@@ -120,11 +120,11 @@ const CreateRoom = () => {
                 <Form.Label>Room Type</Form.Label>
                 <Form.Select
                   aria-label="Select Room Type Field"
-                  name="roomType"
+                  name="room_type"
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  value={values.roomType}
-                  className={touched.roomType && errors.roomType ? 'error' : null}
+                  value={values.room_type}
+                  className={touched.room_type && errors.room_type ? 'error' : null}
                 >
                   <option>Select Room Type</option>
                   <option value="Single">Single</option>
@@ -135,8 +135,8 @@ const CreateRoom = () => {
                   <option value="Presidential Suite">Presidential Suite</option>
                 </Form.Select>
 
-                {touched.roomType && errors.roomType ? (
-                  <div className="error-message">{errors.roomType}</div>
+                {touched.room_type && errors.room_type ? (
+                  <div className="error-message">{errors.room_type}</div>
                 ) : null}
               </Form.Group>
 
