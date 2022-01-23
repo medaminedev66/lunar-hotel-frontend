@@ -30,7 +30,7 @@ function Home() {
         </div>
         <div className="home">
           <div className="nav">
-            <img src={lunar} className="lunar-logo" alt="" />
+            <img src={lunar} className="lunar-logo" alt="Lunar Hotel Logo" />
             <NavPanel />
           </div>
           <div className="main">

@@ -8,6 +8,7 @@ const LogIn = () => {
   const dispatch = useDispatch();
   const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
+
   const onSubmit = (data) => {
     dispatch(login(data));
     navigate('/');

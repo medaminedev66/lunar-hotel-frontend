@@ -27,7 +27,7 @@ const RoomDetails = () => {
       </div>
       <section className="displayRoom">
         <div className="nav">
-          <img src={lunar} className="lunar-logo" alt="" />
+          <img src={lunar} className="lunar-logo" alt="Lunar Hotel Logo" />
           <NavPanel />
         </div>
         <div className="details marginFive leftMargin">
