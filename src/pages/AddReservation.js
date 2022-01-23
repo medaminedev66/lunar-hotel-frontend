@@ -30,7 +30,7 @@ const AddReservation = () => {
       <div className="bigImage">
         <div className="overlap">
           <div className="txtWrapper">
-            <h1 className="upperCase txtWhite">Book a reservation</h1>
+            <h1 className="upperCase txtWhite fs-1">Book a reservation</h1>
             <p className="txtWhite">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
               erat massa, accumsan a porta quis, faucibus et mi. Curabitur
@@ -61,7 +61,7 @@ const AddReservation = () => {
                 handleSubmit,
                 isSubmitting,
               }) => (
-                <Form onSubmit={handleSubmit} class="d-flex">
+                <Form onSubmit={handleSubmit} className="mx-auto row row-cols-2 row-cols-lg-4 mt-3 d-flex justify-content-center align-items-center">
                   <Form.Group controlId="formCity">
                     <Form.Label>City</Form.Label>
                     <Form.Select
@@ -70,7 +70,7 @@ const AddReservation = () => {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.city}
-                      className={touched.city && errors.city ? 'error' : null}
+                      className="{touched.city && errors.city ? 'error' : null} form-radius"
                     >
                       <option>Select Hotel City</option>
                       <option value="Lusaka">Lusaka</option>
@@ -79,7 +79,7 @@ const AddReservation = () => {
                       <option value="Morocco">Morocco</option>
                     </Form.Select>
                     {touched.city && errors.city ? (
-                      <div className="error-message">{errors.city}</div>
+                      <div className="error-message-white">{errors.city}</div>
                     ) : null}
                   </Form.Group>
 
@@ -91,10 +91,10 @@ const AddReservation = () => {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.rate}
-                      className={touched.check_in && errors.check_in ? 'error' : null}
+                      className="{touched.check_in && errors.check_in ? 'error' : null} form-radius"
                     />
                     {touched.check_in && errors.check_in ? (
-                      <div className="error-message">{errors.check_in}</div>
+                      <div className="error-message-white">{errors.check_in}</div>
                     ) : null}
                   </Form.Group>
 
@@ -106,13 +106,12 @@ const AddReservation = () => {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.check_out}
-                      className={touched.check_out && errors.check_out ? 'error' : null}
+                      className="{touched.check_out && errors.check_out ? 'error' : null} form-radius"
                     />
                     {touched.check_out && errors.check_out ? (
-                      <div className="error-message">{errors.check_out}</div>
+                      <div className="error-message-white">{errors.check_out}</div>
                     ) : null}
                   </Form.Group>
-
                   <Button type="submit" disabled={isSubmitting} className="upperCase resBtn">
                     Add reservation
                   </Button>
