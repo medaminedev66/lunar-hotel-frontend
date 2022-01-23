@@ -15,7 +15,9 @@ function RoomItem({ room }) {
       </Row>
       <Row>
         <Col>
-          <h2>{name}</h2>
+          {
+            name && <h2>{name}</h2>
+          }
         </Col>
       </Row>
       <Row>

@@ -3,8 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { Formik } from 'formik';
 import { Form, Button, Offcanvas } from 'react-bootstrap';
+import { useDispatch } from 'react-redux';
 import * as Yup from 'yup';
 import './addReservation.css';
+import { reservationCreate } from '../redux/reservations/reservations';
 
 const validationSchema = Yup.object().shape({
 
@@ -22,6 +24,8 @@ const AddReservation = () => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const dispatch = useDispatch;
   return (
     <div className="fullScreen">
       <div className="vis">
@@ -45,7 +49,7 @@ const AddReservation = () => {
               }}
               validationSchema={validationSchema}
               onSubmit={(values, { setSubmitting, resetForm }) => {
-                // dispatch(addRoom(values));
+                dispatch(reservationCreate(values));
                 setSubmitting(true);
                 resetForm();
                 setSubmitting(false);
