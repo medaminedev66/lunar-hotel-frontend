@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Offcanvas } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -9,9 +9,10 @@ import NavPanel from '../components/NavPanel';
 import { getRooms } from '../redux/rooms/rooms';
 import lunar from '../images/lunar.png';
 
-function Home() {
-  const rooms = [1, 2, 3, 4];
-  // const rr = useSelector((state) => state.roomsReducer);
+const Home = () => {
+  // const rooms = [1, 2, 3, 4];
+  const rooms = useSelector((state) => state.roomsReducer);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -29,16 +30,16 @@ function Home() {
         </div>
         <div className="home">
           <div className="nav">
-            <img src={lunar} className="lunar-logo" alt="" />
+            <img src={lunar} className="lunar-logo" alt="Lunar Hotel Logo" />
             <NavPanel />
           </div>
           <div className="main">
             <h1>Lunar&apos;s rooms</h1>
             <h2>Please select a room for reservation</h2>
             <div className="rooms">
-              {rooms.map((room) => (
-                <NavLink to="/room" exact="true" key={room}>
-                  <RoomItem />
+              {rooms && rooms.map((room) => (
+                <NavLink to="/room" exact="true" key={room.id}>
+                  <RoomItem room={room} key={room.id} />
                 </NavLink>
               ))}
             </div>
@@ -56,6 +57,6 @@ function Home() {
       </Offcanvas>
     </>
   );
-}
+};
 
 export default Home;
