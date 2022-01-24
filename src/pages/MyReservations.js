@@ -1,6 +1,7 @@
 import React from 'react';
 import lunar from '../images/lunar.png';
 import NavPanel from '../components/NavPanel';
+import Reservation from '../components/Reservation';
 
 function MyReservation() {
   const reservations = [1, 2, 3, 4, 5];
@@ -18,7 +19,7 @@ function MyReservation() {
         </h2>
         <div className="reservation">
           {reservations.map((reservation) => (
-            <NavLink to="/reserv" exact="true" key={reservation}></NavLink>
+            <Reservation key={reservation} />
           ))}
         </div>
       </div>
