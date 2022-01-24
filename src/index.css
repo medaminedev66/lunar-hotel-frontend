@@ -1,45 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Squada+One&display=swap');
-
-* {
-  text-decoration: none;
-  list-style: none;
-}
-
-html {
-  height: 100vh;
-}
 /* stylelint-disable -- Stylint doesn't recognise tailwind rules */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 /* stylelint-enable */
 
-body {
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Squada+One&display=swap');
+
+* {
+  text-decoration: none;
+  list-style: none;
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+html {
+  height: 100vh;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.5;
 }
 
 a {
@@ -80,7 +63,6 @@ a {
 }
 
 .main h1 {
-  font-family: 'Barlow', sans-serif;
   color: #253439;
   margin-top: 5rem;
   text-align: center;
@@ -89,7 +71,6 @@ a {
 }
 
 .main h2 {
-  font-family: 'Barlow', sans-serif;
   color: #253439;
   margin-bottom: 2rem;
   text-align: center;
@@ -119,6 +100,10 @@ a {
   font-weight: 600;
 }
 
+.upperCase {
+  text-transform: uppercase;
+}
+
 .error {
   border: 2px solid #ff6565;
 }
@@ -134,7 +119,11 @@ a {
   .nav {
     display: flex;
     width: 250px;
+    margin: 0 auto;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     gap: 1.5rem;
   }
 

@@ -36,5 +36,10 @@ export const login = async (user) => {
 };
 
 export const logout = async () => {
-  await api.delete('/users/sign_out');
+  const token = localStorage.getItem('token');
+  await baseApi.delete('/users/logout', {
+    headers: {
+      Authorization: `${token}`,
+    },
+  });
 };
