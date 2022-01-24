@@ -3,13 +3,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import Image from 'react-bootstrap/Image';
+// import RoomDetails from './RoomDetails';
 import image from '../images/pexels-pixabay-164595.jpg';
 
-const RoomItem = ({ room }) => {
+const RoomItem = ({ room, rooms }) => {
+  console.log(rooms);
   const {
-    name, city, rate, room_type, amenities, picture,
+    name, city, rate, room_type, amenities, id,
   } = room;
+
+  // const handleClick = (id) => {
+  //   console.log(id);
+  // };
   return (
     <Container className="room-item">
       <Row>
@@ -19,34 +26,49 @@ const RoomItem = ({ room }) => {
       </Row>
       <Row>
         <Col>
-          {
-            name && <h2>{name}</h2>
-          }
+          {name && (
+            <h2>
+              Hotel Name:
+              {' '}
+              {name}
+            </h2>
+          )}
         </Col>
       </Row>
       <Row>
         <Col>
-          {
-            city && <h3>{city}</h3>
-          }
-          {
-            rate && (
+          {city && (
             <h3>
-              $
+              City Location:
               {' '}
+              {city}
+            </h3>
+          )}
+          {rate && (
+            <h3>
+              24hrs Rate:
+              {' '}
+              $
               {rate}
             </h3>
-            )
-          }
-          {
-            room_type && <h3>{room_type}</h3>
-          }
-          {
-            amenities && <h3>{amenities}</h3>
-          }
-          {
-            picture && <Image className="room-image" src={picture} alt="hotel room" />
-          }
+          )}
+          {room_type && (
+            <h3>
+              Room Type:
+              {' '}
+              {room_type}
+            </h3>
+          )}
+          {amenities && (
+            <h3>
+              Amenities:
+              {' '}
+              {amenities}
+            </h3>
+          )}
+          {id && (
+            <Link to={{ pathname: 'room_details/' }}>Click me</Link>
+          )}
         </Col>
       </Row>
     </Container>
@@ -55,6 +77,7 @@ const RoomItem = ({ room }) => {
 
 RoomItem.propTypes = {
   room: PropTypes.instanceOf(Object).isRequired,
+  rooms: PropTypes.instanceOf(Object).isRequired,
 };
 
 export default RoomItem;
