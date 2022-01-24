@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { deleteReservation } from '../redux/reservations/reservations';
 
 function Reservation(props) {
+  const dispatch = useDispatch();
   const { reservation } = props;
   return (
     <div className="reservation">
@@ -27,7 +30,11 @@ function Reservation(props) {
             {reservation.id}
           </span>
         </div>
-        <button type="button" className="btn btn-outline-danger">
+        <button
+          type="button"
+          className="btn btn-outline-danger"
+          onClick={() => dispatch(deleteReservation(reservation.id))}
+        >
           Cancel
         </button>
       </div>
