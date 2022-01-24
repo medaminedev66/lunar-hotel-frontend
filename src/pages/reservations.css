@@ -11,6 +11,7 @@
   justify-content: space-between;
   padding: 1rem;
   margin: 1rem 0;
+  gap: 1.5rem;
 }
 
 .tex {
@@ -23,4 +24,3 @@
 .tex span {
   margin-left: 0.8rem;
 }
-

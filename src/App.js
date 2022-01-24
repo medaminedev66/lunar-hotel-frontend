@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-wrap-multilines */
 import {
   HashRouter as Router, Route, Routes,
 } from 'react-router-dom';
