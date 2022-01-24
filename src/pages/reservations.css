@@ -12,3 +12,14 @@
   padding: 1rem;
   margin: 1rem 0;
 }
+
+.tex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.tex span {
+  margin-left: 0.8rem;
+}
