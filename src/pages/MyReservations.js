@@ -1,12 +1,18 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import lunar from '../images/lunar.png';
 import Reservation from '../components/Reservation';
 import NavPanel from '../components/NavPanel';
 import './reservations.css';
+import { getReservations } from '../redux/reservations/reservations';
 
 function MyReservation() {
   const reservations = useSelector((state) => state.reservationsReducer);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getReservations());
+  }, [dispatch]);
   return (
     <div className="home">
       <div className="nav">
