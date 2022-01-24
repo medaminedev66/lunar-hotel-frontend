@@ -1,6 +1,5 @@
 import React from 'react';
 import lunar from '../images/lunar.png';
-import NavPanel from '../components/NavPanel';
 import Reservation from '../components/Reservation';
 
 function MyReservation() {
