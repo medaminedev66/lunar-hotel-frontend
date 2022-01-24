@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import '../roomDetails.css';
 import { Offcanvas } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -26,7 +27,7 @@ const RoomDetails = () => {
       </div>
       <section className="displayRoom">
         <div className="nav">
-          <img src={lunar} className="lunar-logo" alt="" />
+          <img src={lunar} className="lunar-logo" alt="Lunar Hotel Logo" />
           <NavPanel />
         </div>
         <div className="details marginFive leftMargin">
@@ -52,8 +53,10 @@ const RoomDetails = () => {
                 <li key={amenity}>{amenity}</li>
               ))}
             </ul>
-            <button type="button" className="buttonConfig">
-              Add Reservation
+            <button type="button" className="buttonConfig upperClass">
+              <NavLink to="/add_reservation" exact="true">
+                Add Reservation
+              </NavLink>
             </button>
           </div>
         </div>
