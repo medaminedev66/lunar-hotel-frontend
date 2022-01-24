@@ -7,50 +7,58 @@ import LogIn from './pages/LogIn';
 import Auth, { AuthRoute } from './components/Auth';
 import RoomDetails from './components/RoomDetails';
 import CreateRoom from './pages/CreateRoom';
+import MyReservation from './pages/MyReservations';
 
 const App = () => (
   <Router basename={process.env.PUBLIC_URL}>
     <Routes>
       <Route
         path="/"
-        element={(
+        element={
           <Auth>
             <Home />
           </Auth>
-        )}
+        }
       />
       <Route
         path="/users/login"
-        element={(
+        element={
           <AuthRoute>
             <LogIn />
           </AuthRoute>
-        )}
+        }
       />
       <Route
         path="/users/signup"
-        element={(
+        element={
           <AuthRoute>
             <SignUp />
           </AuthRoute>
-        )}
+        }
       />
       <Route
         path="/room_details"
-        element={(
+        element={
           <Auth>
             <RoomDetails />
           </Auth>
-
-        )}
+        }
       />
       <Route
         path="/create_room"
-        element={(
+        element={
           <Auth>
             <CreateRoom />
           </Auth>
-        )}
+        }
+      />
+      <Route
+        path="/reservations"
+        element={
+          <Auth>
+            <MyReservation />
+          </Auth>
+        }
       />
     </Routes>
   </Router>
