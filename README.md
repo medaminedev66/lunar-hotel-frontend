@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# LUNAR HOTEL
 
-## Available Scripts
+> This is a react app which will serve as the front end app for our Lunar hotel back end app.
 
-In the project directory, you can run:
+## The learning objective of this project are
 
-### `npm start`
+- Create react front end app
+- Connect react front end app to rails back end
+- Use API end point to get data
+- Fetch data from the API
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Built With
 
-### `npm test`
+- React
+- Redux
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+To get a local copy up and running follow these simple example steps.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [React](https://reactjs.org/tutorial/tutorial.html#prerequisites)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Setup
+- ```git clone git@github.com:medaminedev66/lunar-hotel-frontend.git```
 
-### `npm run eject`
+- ```cd lunar-hotel-frontend```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Running The App
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Run `npm install`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Make sure to run our [Rails backend application](https://github.com/medaminedev66/lunar-hotel-backend) first before running the React app so that it takes up the `port 3000`. This is very important as our rails API end point must run on `port 3000` for the API to work.
+- Once the back end is runing on `port 3000` then start the react app and you will be prompted to run the server on another port like `port 3001`. You will receive a message in your terminal like this `Would you like to run the app on another port instead? » (Y/n)`. Please enter `y` so that the react app will start on `port 3001`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Authors
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+👤 **Adedamola Shittu**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- GitHub: [@dammyShittu](https://github.com/DammyShittu/)
+- Twitter: [@aded_shittu](https://twitter.com/aded_shittu/)
+- LinkedIn: [Adedamola Shittu](https://www.linkedin.com/in/adedamolashittu/)
 
-### Code Splitting
+👤 **Amine Smahi**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- GitHub: [@medaminedev66](https://github.com/medaminedev66)
+- Twitter: [@medaminesmahi](https://twitter.com/medaminesmahi)
+- LinkedIn: [Mohammed Amine Smahi](https://www.linkedin.com/in/md-amine-smahi/)
 
-### Analyzing the Bundle Size
+👤 **Daniel M. Matongo**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- GitHub:[@mmmatongo](https://github.com/mmatongo)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/mmatongo)
 
-### Making a Progressive Web App
+👤 **Juliana Ifionu**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- GitHub: [@julie-ify](https://github.com/julie-ify)
+- LinkedIn: [Juliana Ifionu](https://www.linkedin.com/in/e-ifionu/)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🤝 Contributing
 
-### Deployment
+Contributions, issues, and feature requests are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Feel free to check the [issues page](https://github.com/medaminedev66/lunar-hotel-frontend/issues).
 
-### `npm run build` fails to minify
+## Show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse for giving us this chance
+- The amazing code reviewers for making us improve every day 👍
