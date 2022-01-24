@@ -1,4 +1,8 @@
+/* eslint-disable no-unused-vars */
 import * as api from '../../api/api';
+
+const END_POINT = 'http://localhost:3000';
+const API_ROUTE = '/api/v1/';
 
 const initialState = [];
 const FETCH_DATA = 'rooms/FETCH_DATA';
@@ -11,8 +15,17 @@ export const createNewRoom = (payload) => ({
 });
 
 export const addRoom = (payload) => async (dispatch) => {
-  const response = await api.createRoom(payload);
-  dispatch(createNewRoom(response));
+  const token = localStorage.getItem('token');
+  const response = await fetch(`${END_POINT}${API_ROUTE}rooms`, {
+    method: 'POST',
+    headers: {
+      Authorization: `${token}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  });
+  const data = await response.json();
+  dispatch(createNewRoom(data));
 };
 
 export const dispatchRooms = (payload) => ({
@@ -20,9 +33,15 @@ export const dispatchRooms = (payload) => ({
   payload,
 });
 
-export const getRooms = (payload) => async (dispatch) => {
-  const response = await api.getRooms(payload);
-  dispatch(dispatchRooms(response));
+export const getRooms = () => async (dispatch) => {
+  const token = localStorage.getItem('token');
+  const response = await fetch(`${END_POINT}${API_ROUTE}rooms`, {
+    headers: {
+      Authorization: `${token}`,
+    },
+  });
+  const data = await response.json();
+  dispatch(dispatchRooms(data));
 };
 
 export const roomsReducer = (state = initialState, action) => {
