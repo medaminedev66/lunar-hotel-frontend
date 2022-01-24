@@ -9,7 +9,6 @@ import Image from 'react-bootstrap/Image';
 import image from '../images/pexels-pixabay-164595.jpg';
 
 const RoomItem = ({ room, rooms }) => {
-  console.log(rooms);
   const {
     name, city, rate, room_type, amenities, id,
   } = room;
