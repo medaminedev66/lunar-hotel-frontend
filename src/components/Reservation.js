@@ -22,7 +22,7 @@ function Reservation() {
           <h3>Room-id:</h3>
           <span>1268N</span>
         </div>
-        <button type="button" className="btn btn-danger">
+        <button type="button" className="btn btn-outline-danger">
           Cancel
         </button>
       </div>
