@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-// import * as api from '../../api/api';
 const END_POINT = 'http://localhost:3000';
 const API_ROUTE = '/api/v1/';
 const initialState = [];
