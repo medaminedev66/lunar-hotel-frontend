@@ -1,5 +1,4 @@
 import { React, useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Offcanvas } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -38,9 +37,7 @@ const Home = () => {
             <h2>Please select a room for reservation</h2>
             <div className="rooms">
               {rooms && rooms.map((room) => (
-                <NavLink to="/room" exact="true" key={room.id}>
-                  <RoomItem room={room} key={room.id} />
-                </NavLink>
+                <RoomItem room={room} key={room.id} rooms={rooms} />
               ))}
             </div>
           </div>
