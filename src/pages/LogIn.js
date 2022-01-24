@@ -26,7 +26,10 @@ const LogIn = () => {
             value="Log In"
           />
         </form>
-        <Link className="cursor-pointer text-indigo-600 hover:text-indigo-800" to="/users/signup">Sign Up</Link>
+        <small className="flex justify-center items-center">
+          Don&apos;t have an account?
+          <Link className="cursor-pointer text-indigo-600 hover:text-indigo-800 px-2 text-sm" to="/users/signup">Sign Up</Link>
+        </small>
       </div>
     </div>
   );

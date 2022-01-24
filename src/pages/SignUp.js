@@ -25,7 +25,10 @@ const SignUp = () => {
           <input className="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300" name="password_confirmation" type="password" placeholder="Password Confirmation" {...register('password_confirmation', { required: true })} />
           <input className="w-full bg-indigo-700 hover:bg-indigo-600 text-white font-bold py-2 px-4 mb-6 rounded" type="submit" value="Sign Up" />
         </form>
-        <Link className="cursor-pointer text-indigo-600 hover:text-indigo-800" to="/users/login">Log In</Link>
+        <small className="flex justify-center items-center">
+          Already have an account?
+          <Link className="cursor-pointer text-indigo-600 hover:text-indigo-800 px-2 text-sm" to="/users/login">Log In</Link>
+        </small>
       </div>
     </div>
   );
