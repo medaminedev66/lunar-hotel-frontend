@@ -1,23 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Squada+One&display=swap');
-
-* {
-  text-decoration: none;
-  list-style: none;
-}
-
-html {
-  height: 100vh;
-}
 /* stylelint-disable -- Stylint doesn't recognise tailwind rules */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 /* stylelint-enable */
 
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Squada+One&display=swap');
+
 * {
+  text-decoration: none;
+  list-style: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
 }
 
 body {

@@ -16,17 +16,17 @@
 
 .form-container1 {
   height: 130vh;
-  background-image: linear-gradient(
-    rgba(0, 0, 0, 0.527),
-    rgba(0, 0, 0, 0.5)
-  ),
-  url('../images/pexels-pixabay-164595.jpg');
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.527),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('../images/pexels-pixabay-164595.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
 }
-
 
 h1 {
   font-weight: bold;
@@ -85,7 +85,6 @@ h1 {
 } */
 
 @media (min-width: 768px) {
-
   .form-container1 {
     height: 100vh;
   }
