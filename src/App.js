@@ -36,7 +36,7 @@ const App = () => (
         )}
       />
       <Route
-        path="/room_details"
+        path="/room_details/:id"
         element={(
           <Auth>
             <RoomDetails />

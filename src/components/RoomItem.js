@@ -8,7 +8,7 @@ import Image from 'react-bootstrap/Image';
 // import RoomDetails from './RoomDetails';
 import image from '../images/pexels-pixabay-164595.jpg';
 
-const RoomItem = ({ room, rooms }) => {
+const RoomItem = ({ room }) => {
   const {
     name, city, rate, room_type, amenities, id,
   } = room;
@@ -66,7 +66,7 @@ const RoomItem = ({ room, rooms }) => {
             </h3>
           )}
           {id && (
-            <Link to={{ pathname: 'room_details/' }}>Click me</Link>
+            <Link to={{ pathname: `room_details/${id}` }}>Click me</Link>
           )}
         </Col>
       </Row>
@@ -76,7 +76,6 @@ const RoomItem = ({ room, rooms }) => {
 
 RoomItem.propTypes = {
   room: PropTypes.instanceOf(Object).isRequired,
-  rooms: PropTypes.instanceOf(Object).isRequired,
 };
 
 export default RoomItem;
