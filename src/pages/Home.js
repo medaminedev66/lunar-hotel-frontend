@@ -6,6 +6,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import RoomItem from '../components/RoomItem';
 import NavPanel from '../components/NavPanel';
 import { getRooms } from '../redux/rooms/rooms';
+// import { getReservations } from '../redux/reservations/reservations';
 import lunar from '../images/lunar.png';
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(getRooms());
+    // dispatch(getReservations());
   }, [dispatch]);
 
   const [show, setShow] = useState(false);

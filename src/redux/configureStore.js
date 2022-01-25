@@ -5,7 +5,7 @@ import { persistReducer, persistStore } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { roomsReducer } from './rooms/rooms';
 import authReducer from './auth';
-import reservationsReducer from './reservations/reservations';
+import { reservationsReducer } from './reservations/reservations';
 
 const reducer = combineReducers({
   roomsReducer,
