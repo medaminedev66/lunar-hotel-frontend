@@ -1,30 +1,17 @@
-// const CREATE_RESERVATION = 'reservation/create_reservation';
-// const GET_SINGLE_RESERVATION = 'reservation/get_single_reservation';
-// const GET_ALL_RESERVATION = 'reservation/get_all_reservation';
 const DELETE_RESERVATION = 'reservation/delete_reservation';
+const FETCH_DATA = 'reservations/FETCH_DATA';
+const UPDATE_STATE = 'reservations/UPDATE_STATE';
+const CREATE_RESERVATION = 'reservations/CREATE_ROOM';
 
 const END_POINT = 'http://localhost:3000';
 const API_ROUTE = '/api/v1/';
 
 const initialState = [];
-const FETCH_DATA = 'reservations/FETCH_DATA';
-const UPDATE_STATE = 'reservations/UPDATE_STATE';
-const CREATE_RESERVATION = 'reservations/CREATE_ROOM';
 
-// export const createReservationAction = (payload) => ({
-//   type: CREATE_RESERVATION,
-//   payload,
-// });
-
-// export const getSingleReservationAction = (payload) => ({
-//   type: GET_SINGLE_RESERVATION,
-//   payload,
-// });
-
-// export const getAllReservationAction = (payload) => ({
-//   type: GET_ALL_RESERVATION,
-//   payload,
-// });
+export const createReservationAction = (payload) => ({
+  type: CREATE_RESERVATION,
+  payload,
+});
 
 export const deleteAReservationAction = (payload) => ({
   type: DELETE_RESERVATION,
@@ -56,6 +43,20 @@ export const deleteReservation = (id) => async (dispatch) => {
     },
   });
   dispatch(deleteAReservationAction(id));
+};
+
+export const createReservation = (payload) => async (dispatch) => {
+  const token = localStorage.getItem('token');
+  const response = await fetch(`${END_POINT}${API_ROUTE}reservations`, {
+    method: 'POST',
+    headers: {
+      Authorization: `${token}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  });
+  const data = await response.json();
+  dispatch(createReservationAction(data));
 };
 
 export const reservationsReducer = (state = initialState, action) => {

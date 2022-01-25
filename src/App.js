@@ -9,6 +9,7 @@ import Auth, { AuthRoute } from './components/Auth';
 import RoomDetails from './components/RoomDetails';
 import CreateRoom from './pages/CreateRoom';
 import MyReservation from './pages/MyReservations';
+import AddReservation from './pages/AddReservation';
 
 const App = () => (
   <Router basename={process.env.PUBLIC_URL}>
@@ -60,6 +61,11 @@ const App = () => (
             <MyReservation />
           </Auth>
         }
+      />
+
+      <Route
+        path="/add_reservation"
+        element={(<AddReservation />)}
       />
     </Routes>
   </Router>
