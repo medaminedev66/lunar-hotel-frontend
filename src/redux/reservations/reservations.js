@@ -49,14 +49,12 @@ export const getReservations = () => async (dispatch) => {
 
 export const deleteReservation = (id) => async (dispatch) => {
   const token = localStorage.getItem('token');
-  const response = await fetch(`${END_POINT}${API_ROUTE}reservations/${id}`, {
+  await fetch(`${END_POINT}${API_ROUTE}reservations/${id}`, {
     method: 'DELETE',
     headers: {
       Authorization: `${token}`,
     },
   });
-  const data = await response.json();
-  console.log(data);
   dispatch(deleteAReservationAction(id));
 };
 
