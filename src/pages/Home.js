@@ -10,7 +10,6 @@ import lunar from '../images/lunar.png';
 
 const Home = () => {
   const rooms = useSelector((state) => state.roomsReducer);
-  console.log(rooms);
 
   const dispatch = useDispatch();
 
@@ -35,7 +34,7 @@ const Home = () => {
           <div className="main">
             <h1>Lunar&apos;s rooms</h1>
             {rooms.length === 0 ? (
-              <h2>Create a room</h2>
+              <h2>Please create a room</h2>
             ) : (
               <h2>Please select a room for reservation</h2>
             )}
