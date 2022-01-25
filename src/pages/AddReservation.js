@@ -1,34 +1,37 @@
 import React, { useState } from 'react';
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { Formik } from 'formik';
 import { Form, Button, Offcanvas } from 'react-bootstrap';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
-// import { createReservation } from '../redux/reservations/reservations';
+import { createReservation } from '../redux/reservations/reservations';
 import './addReservation.css';
 
 const validationSchema = Yup.object().shape({
 
-  city: Yup.string()
-    .min(2, '*City must have at least 2 characters')
-    .max(25, '*City can\'t be longer than 25 characters')
-    .required('*Hotel city is required'),
-
-  check_in: Yup.date().required('*Check In date is required'),
-  check_out: Yup.date().required('*Check Out date is required'),
+  check_in: Yup.date()
+    .default(() => new Date())
+    .required('*Check In date is required'),
+  check_out: Yup.date()
+    .when('check_in', (checkIn, yup) => checkIn && yup.min(checkIn, 'Check in date cannot be greater than check out date'))
+    .required('*Check Out date is required'),
 });
 
 const AddReservation = () => {
   const [show, setShow] = useState(false);
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const handleBack = () => navigate(-1);
   return (
     <div className="form-container1">
+      <div className="p-2">
+        <FontAwesomeIcon icon={faArrowLeft} onClick={handleBack} className="text-white point" />
+      </div>
       <div className="fullScreen">
         <div className="p-2 vis">
           <FontAwesomeIcon icon={faBars} onClick={handleShow} className="text-white" />
@@ -43,17 +46,20 @@ const AddReservation = () => {
 
           <Formik
             initialValues={{
-              city: '',
               check_in: '',
               check_out: '',
+              room_id: 4,
             }}
             validationSchema={validationSchema}
             onSubmit={(values, { setSubmitting, resetForm }) => {
               setSubmitting(true);
-              // dispatch(createReservation(values));
+              dispatch(createReservation(values));
               resetForm();
               setSubmitting(false);
-              navigate('/reservations');
+              setTimeout(() => {
+                navigate('/reservations');
+                window.location.reload(true);
+              }, 1000);
             }}
           >
 
@@ -66,28 +72,7 @@ const AddReservation = () => {
               handleSubmit,
               isSubmitting,
             }) => (
-              <Form onSubmit={handleSubmit} className="mx-auto row row-cols-2 row-cols-lg-4 mt-3 d-flex justify-content-center align-items-center">
-                <Form.Group controlId="formCity">
-                  <Form.Label>City</Form.Label>
-                  <Form.Select
-                    aria-label="Select Hotel City Field"
-                    name="city"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    value={values.city}
-                    className="{touched.city && errors.city ? 'error' : null} form-radius"
-                  >
-                    <option>Select Hotel City</option>
-                    <option value="Lusaka">Lusaka</option>
-                    <option value="Abuja">Abuja</option>
-                    <option value="Lagos">Lagos</option>
-                    <option value="Morocco">Morocco</option>
-                  </Form.Select>
-                  {touched.city && errors.city ? (
-                    <div className="error-message-white">{errors.city}</div>
-                  ) : null}
-                </Form.Group>
-
+              <Form onSubmit={handleSubmit} className="mx-auto row row-cols-2 mt-3 d-flex justify-content-center align-items-center">
                 <Form.Group controlId="FormCheckIn">
                   <Form.Label>Check In</Form.Label>
                   <Form.Control
@@ -95,7 +80,7 @@ const AddReservation = () => {
                     name="check_in"
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    value={values.rate}
+                    value={values.check_in}
                     className="{touched.check_in && errors.check_in ? 'error' : null} form-radius"
                   />
                   {touched.check_in && errors.check_in ? (
@@ -117,6 +102,7 @@ const AddReservation = () => {
                     <div className="error-message-white">{errors.check_out}</div>
                   ) : null}
                 </Form.Group>
+
                 <Button type="submit" disabled={isSubmitting} className="upperCase resBtn">
                   Reserve
                 </Button>
