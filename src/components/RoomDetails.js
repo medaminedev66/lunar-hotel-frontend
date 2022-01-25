@@ -32,7 +32,7 @@ const RoomDetails = () => {
 
   return (
     <main className="contain">
-      <div className="vis">
+      <div className="p-2 vis">
         <FontAwesomeIcon icon={faBars} onClick={handleShow} />
       </div>
       <section className="displayRoom">
@@ -82,13 +82,12 @@ const RoomDetails = () => {
           ))}
         </ul>
       </section>
-      <Offcanvas show={show} onHide={handleClose}>
+      <Offcanvas className="darkened-off" show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Lunar</Offcanvas.Title>
+          <Offcanvas.Title><img src={lunar} className="lunar-logo-m" alt="Lunar Hotel Logo" /></Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
+          <NavPanel />
         </Offcanvas.Body>
       </Offcanvas>
     </main>
