@@ -18,13 +18,7 @@ const RoomDetails = () => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  // const rooms = {
-  //   name: 'Room1',
-  //   city: 'test-city',
-  //   rate: '100',
-  //   room_type: 'test-info',
-  //   amenities: ['amenities1', 'amenities2', 'amenities3', 'amenities5'],
-  // };
+
   return (
     <main className="contain">
       <div className="vis">
@@ -49,7 +43,7 @@ const RoomDetails = () => {
                     {single.city}
                   </p>
                   <p>
-                    Room rate: $z
+                    Room rate: $
                     {single.rate}
                   </p>
                   <p>
@@ -68,7 +62,6 @@ const RoomDetails = () => {
             </li>
           ))}
         </ul>
-
       </section>
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
