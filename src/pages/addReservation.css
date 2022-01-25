@@ -66,6 +66,7 @@ h1 {
 @media (min-width: 768px) {
   .form-container1 {
     height: 100vh;
+    overflow-y: hidden;
   }
 
   .txtWrapper {
