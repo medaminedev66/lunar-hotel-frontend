@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-wrap-multilines */
 import {
   HashRouter as Router, Route, Routes,
 } from 'react-router-dom';
@@ -7,6 +8,7 @@ import LogIn from './pages/LogIn';
 import Auth, { AuthRoute } from './components/Auth';
 import RoomDetails from './components/RoomDetails';
 import CreateRoom from './pages/CreateRoom';
+import MyReservation from './pages/MyReservations';
 import AddReservation from './pages/AddReservation';
 
 const App = () => (
@@ -14,27 +16,27 @@ const App = () => (
     <Routes>
       <Route
         path="/"
-        element={(
+        element={
           <Auth>
             <Home />
           </Auth>
-        )}
+        }
       />
       <Route
         path="/users/login"
-        element={(
+        element={
           <AuthRoute>
             <LogIn />
           </AuthRoute>
-        )}
+        }
       />
       <Route
         path="/users/signup"
-        element={(
+        element={
           <AuthRoute>
             <SignUp />
           </AuthRoute>
-        )}
+        }
       />
       <Route
         path="/room_details/:id"
@@ -42,16 +44,23 @@ const App = () => (
           <Auth>
             <RoomDetails />
           </Auth>
-
         )}
       />
       <Route
         path="/create_room"
-        element={(
+        element={
           <Auth>
             <CreateRoom />
           </Auth>
-        )}
+        }
+      />
+      <Route
+        path="/reservations"
+        element={
+          <Auth>
+            <MyReservation />
+          </Auth>
+        }
       />
 
       <Route
