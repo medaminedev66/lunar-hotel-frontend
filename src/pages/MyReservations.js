@@ -21,10 +21,25 @@ function MyReservation() {
       </div>
       <div className="main">
         <h1>My reservations</h1>
-        <h2>
-          You are able to cancel the reservation before 24 hours of the
-          reservation date
-        </h2>
+        {(reservations.length === 0) ? (
+          <h2 className="no-reservation lh-lg mt-5 fs-4">
+            Oh Oh!
+            <br />
+            You do not have a reservation yet
+            <br />
+            Kindly reserve a room on the&nbsp;
+            <a href="/" className="text-danger">HOME</a>
+            &nbsp;page
+          </h2>
+        )
+          : (
+            <h2>
+              You are able to cancel the reservation before 24 hours of the
+              reservation date
+            </h2>
+          )}
+        ;
+
         <div className="reservations">
           {reservations.map((reservation) => (
             <Reservation reservation={reservation} key={reservation.id} />
