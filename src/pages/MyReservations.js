@@ -25,6 +25,10 @@ function MyReservation() {
       <div className="p-2 vis">
         <FontAwesomeIcon icon={faBars} onClick={handleShow} />
       </div>
+      <div className="nav">
+        <img src={lunar} className="lunar-logo" alt="Lunar Hotel Logo" />
+        <NavPanel />
+      </div>
       <div className="main">
         <h1>My reservations</h1>
         {(reservations.length === 0) ? (

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams, NavLink, useNavigate } from 'react-router-dom';
-import '../roomDetails.css';
+import './roomDetails.css';
 import { Offcanvas } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -73,7 +73,7 @@ const RoomDetails = () => {
                   </button>
                   <NavLink to="/add_reservation" exact="true">
                     <button type="button" className="buttonConfig upperClass">
-                      Add Room
+                      Reserve A Room
                     </button>
                   </NavLink>
                 </div>

@@ -59,9 +59,9 @@
 .buttonConfig {
   background-color: blue;
   border: none;
-  padding: 15px 15px;
+  padding: 10px 12px;
   color: #f1f1f1;
-  border-radius: 20px;
+  border-radius: 25px;
   margin-top: 2rem;
   box-shadow: 0 1px 8px rgb(224, 224, 224);
 }
