@@ -65,7 +65,11 @@ const App = () => (
 
       <Route
         path="/add_reservation"
-        element={(<AddReservation />)}
+        element={
+          <Auth>
+            <AddReservation />
+          </Auth>
+        }
       />
     </Routes>
   </Router>
