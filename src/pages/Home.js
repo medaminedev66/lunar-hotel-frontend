@@ -23,7 +23,7 @@ const Home = () => {
   return (
     <>
       <div className="Container">
-        <div className="vis">
+        <div className="p-2 vis">
           <FontAwesomeIcon icon={faBars} onClick={handleShow} />
         </div>
         <div className="home">
@@ -47,13 +47,12 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Offcanvas show={show} onHide={handleClose}>
+      <Offcanvas className="darkened-off" show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Lunar</Offcanvas.Title>
+          <Offcanvas.Title><img src={lunar} className="lunar-logo-m" alt="Lunar Hotel Logo" /></Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
+          <NavPanel className="text-black" />
         </Offcanvas.Body>
       </Offcanvas>
     </>

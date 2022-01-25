@@ -28,7 +28,7 @@ const RoomItem = ({ room }) => {
       <Row>
         <Col>
           {id && (
-            <Link to={{ pathname: `room_details/${id}` }} className="btn btn-primary upperCase mb-2">Add Room</Link>
+            <Link to={{ pathname: `room_details/${id}` }} className="btn btn-primary upperCase mb-2">See room</Link>
           )}
         </Col>
       </Row>

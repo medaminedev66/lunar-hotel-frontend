@@ -7,6 +7,8 @@ import { Form, Button, Offcanvas } from 'react-bootstrap';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 import { createReservation } from '../redux/reservations/reservations';
+import NavPanel from '../components/NavPanel';
+import lunar from '../images/lunar.png';
 import './addReservation.css';
 
 const validationSchema = Yup.object().shape({
@@ -111,13 +113,12 @@ const AddReservation = () => {
           </Formik>
         </div>
       </div>
-      <Offcanvas show={show} onHide={handleClose}>
+      <Offcanvas className="darkened-off" show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Lunar</Offcanvas.Title>
+          <Offcanvas.Title><img src={lunar} className="lunar-logo-m" alt="Lunar Hotel Logo" /></Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
+          <NavPanel />
         </Offcanvas.Body>
       </Offcanvas>
     </div>

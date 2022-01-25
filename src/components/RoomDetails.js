@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
-import { useParams, NavLink } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { useParams, NavLink, useNavigate } from 'react-router-dom';
 import '../roomDetails.css';
 import { Offcanvas } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import NavPanel from './NavPanel';
 import lunar from '../images/lunar.png';
+import { deleteRoom } from '../redux/rooms/rooms';
 
 const RoomDetails = () => {
   const rooms = useSelector((state) => state.roomsReducer);
@@ -18,9 +19,20 @@ const RoomDetails = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleClick = (id) => {
+    dispatch(deleteRoom(id));
+    setTimeout(() => {
+      navigate('/');
+      window.location.reload(true);
+    }, 1000);
+  };
+
   return (
     <main className="contain">
-      <div className="vis">
+      <div className="p-2 vis">
         <FontAwesomeIcon icon={faBars} onClick={handleShow} />
       </div>
       <section className="displayRoom">
@@ -56,9 +68,12 @@ const RoomDetails = () => {
                     <span className="items">Amenities: </span>
                     <span className="itemsValue">{single.amenities}</span>
                   </p>
+                  <button type="button" className="buttonConfig upperClass" onClick={() => handleClick(single.id)}>
+                    Delete Room
+                  </button>
                   <NavLink to="/add_reservation" exact="true">
                     <button type="button" className="buttonConfig upperClass">
-                      Add Reservation
+                      Add Room
                     </button>
                   </NavLink>
                 </div>
@@ -67,13 +82,12 @@ const RoomDetails = () => {
           ))}
         </ul>
       </section>
-      <Offcanvas show={show} onHide={handleClose}>
+      <Offcanvas className="darkened-off" show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Lunar</Offcanvas.Title>
+          <Offcanvas.Title><img src={lunar} className="lunar-logo-m" alt="Lunar Hotel Logo" /></Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
+          <NavPanel />
         </Offcanvas.Body>
       </Offcanvas>
     </main>
