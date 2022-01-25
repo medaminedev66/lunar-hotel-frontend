@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams, NavLink } from 'react-router-dom';
 import '../roomDetails.css';
 import { Offcanvas } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,7 +15,6 @@ const RoomDetails = () => {
   const room = rooms.filter((r) => r.id === parseInt(id, 10));
 
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -38,25 +37,30 @@ const RoomDetails = () => {
                 </div>
                 <div className="displayThree">
                   <h1 className="upperCase">{single.name}</h1>
-                  <p>
-                    City:
-                    {single.city}
+                  <p className="mb-2 badg-odd">
+                    <span className="items">City: </span>
+                    <span className="itemsValue">{single.city}</span>
                   </p>
-                  <p>
-                    Room rate: $
-                    {single.rate}
+                  <p className="mb-2 badg-even">
+                    <span className="items">Room rate: </span>
+                    <span className="itemsValue">
+                      $
+                      {single.rate}
+                    </span>
                   </p>
-                  <p>
-                    Room type:
-                    {single.room_type}
+                  <p className="mb-2 badg-odd">
+                    <span className="items">Room type: </span>
+                    <span className="itemsValue">{single.room_type}</span>
                   </p>
-                  <p>
-                    Room type:
-                    {single.amenities}
+                  <p className="mb-2 badg-even">
+                    <span className="items">Amenities: </span>
+                    <span className="itemsValue">{single.amenities}</span>
                   </p>
-                  <button type="button" className="buttonConfig">
-                    Add Reservation
-                  </button>
+                  <NavLink to="/add_reservation" exact="true">
+                    <button type="button" className="buttonConfig upperClass">
+                      Add Reservation
+                    </button>
+                  </NavLink>
                 </div>
               </div>
             </li>
