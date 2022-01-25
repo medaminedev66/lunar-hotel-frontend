@@ -104,6 +104,7 @@ a {
   background-color: rgba(37, 52, 57);
   border: none;
 }
+
 .upperCase {
   text-transform: uppercase;
 }
@@ -148,4 +149,5 @@ a {
   .main {
     margin-left: 250px;
   }
+  
 }
