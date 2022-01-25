@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-// import { useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { Formik } from 'formik';
 import { Form, Button, Offcanvas } from 'react-bootstrap';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
-// import { createReservation } from '../redux/reservations/reservations';
+import NavPanel from '../components/NavPanel';
+import lunar from '../images/lunar.png';
 import './addReservation.css';
 
 const validationSchema = Yup.object().shape({
@@ -22,7 +22,6 @@ const validationSchema = Yup.object().shape({
 
 const AddReservation = () => {
   const [show, setShow] = useState(false);
-  // const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleClose = () => setShow(false);
@@ -50,7 +49,6 @@ const AddReservation = () => {
             validationSchema={validationSchema}
             onSubmit={(values, { setSubmitting, resetForm }) => {
               setSubmitting(true);
-              // dispatch(createReservation(values));
               resetForm();
               setSubmitting(false);
               navigate('/reservations');
@@ -125,13 +123,12 @@ const AddReservation = () => {
           </Formik>
         </div>
       </div>
-      <Offcanvas show={show} onHide={handleClose}>
+      <Offcanvas className="darkened-off" show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Lunar</Offcanvas.Title>
+          <Offcanvas.Title><img src={lunar} className="lunar-logo-m" alt="Lunar Hotel Logo" /></Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
+          <NavPanel />
         </Offcanvas.Body>
       </Offcanvas>
     </div>
