@@ -9,7 +9,6 @@ import { getRooms } from '../redux/rooms/rooms';
 import lunar from '../images/lunar.png';
 
 const Home = () => {
-  // const rooms = [1, 2, 3, 4];
   const rooms = useSelector((state) => state.roomsReducer);
   console.log(rooms);
 
