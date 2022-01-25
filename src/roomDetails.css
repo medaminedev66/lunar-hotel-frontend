@@ -28,11 +28,13 @@
 .displayTwo {
   width: 100%;
   padding-left: 3rem;
+  align-self: center;
 }
 
 .displayThree {
   width: 100%;
   padding-left: 3rem;
+  text-align: center;
 }
 
 .displayColumn {
@@ -49,12 +51,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-content: center;
   padding-bottom: 3rem;
   row-gap: 3rem;
 }
 
 .buttonConfig {
-  background-color: darkred;
+  background-color: blue;
   border: none;
   padding: 15px 15px;
   color: #f1f1f1;
@@ -64,8 +67,28 @@
 }
 
 .buttonConfig:hover {
-  background-color: brown;
+  background-color: rgb(14, 14, 202);
   color: #fff;
+  text-decoration: none;
+}
+
+.items {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.badg-odd {
+  background-color: rgb(218, 94, 94);
+  color: #fff;
+  padding: 10px 1px;
+  border-radius: 5px;
+}
+
+.badg-even {
+  background-color: rgb(202, 34, 34);
+  color: #fff;
+  padding: 10px 1px;
+  border-radius: 5px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -73,19 +96,26 @@
     display: none;
   }
 
+  .details {
+    display: flex;
+    flex-direction: column;
+  }
+
   .leftMargin {
     margin-left: 250px;
   }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1200px) {
   .details {
+    display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    align-items: center;
+    min-width: 80%;
   }
 
   .displayTwo {
-    width: 70%;
+    max-width: 90%;
   }
 
   .displayThree {

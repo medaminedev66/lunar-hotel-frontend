@@ -10,7 +10,6 @@ import { getRooms } from '../redux/rooms/rooms';
 import lunar from '../images/lunar.png';
 
 const Home = () => {
-  // const rooms = [1, 2, 3, 4];
   const rooms = useSelector((state) => state.roomsReducer);
 
   const dispatch = useDispatch();
@@ -36,11 +35,16 @@ const Home = () => {
           </div>
           <div className="main">
             <h1>Lunar&apos;s rooms</h1>
-            <h2>Please select a room for reservation</h2>
+            {rooms.length === 0 ? (
+              <h2>Please create a room</h2>
+            ) : (
+              <h2>Please select a room for reservation</h2>
+            )}
             <div className="rooms">
-              {rooms && rooms.map((room) => (
-                <RoomItem room={room} key={room.id} rooms={rooms} />
-              ))}
+              {rooms && (
+                rooms.map((room) => (
+                  <RoomItem room={room} key={room.id} rooms={rooms} />
+                )))}
             </div>
           </div>
         </div>

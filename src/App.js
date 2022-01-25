@@ -39,12 +39,12 @@ const App = () => (
         }
       />
       <Route
-        path="/room_details"
-        element={
+        path="/room_details/:id"
+        element={(
           <Auth>
             <RoomDetails />
           </Auth>
-        }
+        )}
       />
       <Route
         path="/create_room"
