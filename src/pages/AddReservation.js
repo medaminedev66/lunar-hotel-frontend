@@ -8,7 +8,7 @@ import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 import { createReservation } from '../redux/reservations/reservations';
 import NavPanel from '../components/NavPanel';
-import lunar from '../images/lunar.png';
+
 import './addReservation.css';
 
 const validationSchema = Yup.object().shape({
@@ -40,13 +40,6 @@ const AddReservation = () => {
           <FontAwesomeIcon icon={faBars} onClick={handleShow} className="text-white" />
         </div>
         <div className="txtWrapper">
-          <h1 className="upperCase txtWhite fs-1">Book a reservation</h1>
-          <p className="txtWhite">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-            erat massa, accumsan a porta quis, faucibus et mi. Curabitur
-            cursus nulla eu magna posuere, sit amet fringilla orci elementum.
-          </p>
-
           <Formik
             initialValues={{
               check_in: '',
@@ -116,10 +109,10 @@ const AddReservation = () => {
       </div>
       <Offcanvas className="darkened-off" show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title><img src={lunar} className="lunar-logo-m" alt="Lunar Hotel Logo" /></Offcanvas.Title>
+          <Offcanvas.Title><h1 className="brand">Lunar Hotel</h1></Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <NavPanel />
+          <NavPanel className="text-black" />
         </Offcanvas.Body>
       </Offcanvas>
     </div>

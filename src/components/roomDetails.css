@@ -27,14 +27,15 @@
 
 .displayTwo {
   width: 100%;
-  padding-left: 3rem;
+  margin-left: 3rem;
   align-self: center;
 }
 
 .displayThree {
-  width: 100%;
-  padding-left: 3rem;
+  padding-left: 0;
   text-align: center;
+  margin-right: 10px;
+  max-width: 95%;
 }
 
 .displayColumn {
@@ -47,6 +48,28 @@
   margin-top: 5rem;
 }
 
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+
+td,
+th {
+  text-align: left;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+th {
+  font-weight: bold;
+}
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
 .details {
   display: flex;
   flex-direction: column;
@@ -57,7 +80,7 @@
 }
 
 .buttonConfig {
-  background-color: blue;
+  background-color: #97bf0f;
   border: none;
   padding: 10px 12px;
   color: #f1f1f1;
@@ -67,25 +90,35 @@
 }
 
 .buttonConfig:hover {
-  background-color: rgb(14, 14, 202);
+  background-color: #97bf0f;
   color: #fff;
   text-decoration: none;
 }
 
+.fw-600 {
+  font-weight: 600;
+}
+
+.buttonConfig > h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
 .items {
-  font-size: 20px;
+  font-size: 14pt;
   font-weight: 500;
 }
 
 .badg-odd {
-  background-color: rgb(218, 94, 94);
+  background-color: #97bf0f;
   color: #fff;
   padding: 10px 1px;
   border-radius: 5px;
 }
 
 .badg-even {
-  background-color: rgb(202, 34, 34);
+  background-color: #97bf0f;
   color: #fff;
   padding: 10px 1px;
   border-radius: 5px;
@@ -119,6 +152,6 @@
   }
 
   .displayThree {
-    width: 30%;
+    width: 45%;
   }
 }

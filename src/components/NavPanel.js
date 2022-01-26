@@ -35,16 +35,16 @@ const NavPanel = () => {
       <nav>
         <ul>
           {links.map((link) => (
-            <li key={link.id} className="nav-link color-switch">
-              <NavLink to={link.path} exact="true">
+            <li key={link.id} className="nav-link the-nav pt-0 pb-0 float-left text-black">
+              <NavLink activeClassName="active" to={link.path} exact="true">
                 {link.text}
               </NavLink>
             </li>
           ))}
 
           {isAuthenticated && (
-            <li>
-              <a href="/" className="nav-link color-switch" onClick={handleLogout}>Log Out</a>
+            <li className="pt-60 log-out">
+              <a href="/" className="nav-link text-black button p-20 text-center" type="button" onClick={handleLogout}>Log Out</a>
             </li>
           )}
         </ul>

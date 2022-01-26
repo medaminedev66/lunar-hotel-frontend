@@ -11,7 +11,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { addRoom } from '../redux/rooms/rooms';
 import NavPanel from '../components/NavPanel';
-import lunar from '../images/lunar.png';
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
@@ -52,8 +51,8 @@ const CreateRoom = () => {
       <div className="p-2 vis">
         <FontAwesomeIcon icon={faBars} onClick={handleShow} className="text-white" />
       </div>
-      <div className="nav">
-        <img src={lunar} className="lunar-logo" alt="Lunar Hotel Logo" />
+      <div className="nav pt-10">
+        <h1 className="brand">Lunar Hotel</h1>
         <NavPanel />
       </div>
       <Container className="my_container">
@@ -216,10 +215,10 @@ const CreateRoom = () => {
       </Container>
       <Offcanvas className="darkened-off" show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title><img src={lunar} className="lunar-logo-m" alt="Lunar Hotel Logo" /></Offcanvas.Title>
+          <Offcanvas.Title><h1 className="brand">Lunar Hotel</h1></Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <NavPanel />
+          <NavPanel className="text-black" />
         </Offcanvas.Body>
       </Offcanvas>
     </section>

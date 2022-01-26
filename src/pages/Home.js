@@ -6,7 +6,6 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import RoomItem from '../components/RoomItem';
 import NavPanel from '../components/NavPanel';
 import { getRooms } from '../redux/rooms/rooms';
-import lunar from '../images/lunar.png';
 
 const Home = () => {
   const rooms = useSelector((state) => state.roomsReducer);
@@ -27,8 +26,8 @@ const Home = () => {
           <FontAwesomeIcon icon={faBars} onClick={handleShow} />
         </div>
         <div className="home">
-          <div className="nav">
-            <img src={lunar} className="lunar-logo" alt="Lunar Hotel Logo" />
+          <div className="nav pt-10">
+            <h1 className="brand">Lunar Hotel</h1>
             <NavPanel />
           </div>
           <div className="main">
@@ -48,7 +47,7 @@ const Home = () => {
       </div>
       <Offcanvas className="darkened-off" show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title><img src={lunar} className="lunar-logo-m" alt="Lunar Hotel Logo" /></Offcanvas.Title>
+          <Offcanvas.Title><h1 className="brand">Lunar Hotel</h1></Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           <NavPanel className="text-black" />

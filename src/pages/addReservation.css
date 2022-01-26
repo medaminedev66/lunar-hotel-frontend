@@ -2,8 +2,8 @@
   height: 130vh;
   background-image:
     linear-gradient(
-      rgba(0, 0, 0, 0.527),
-      rgba(0, 0, 0, 0.5)
+      rgba(153, 194, 42) 0%,
+      rgba(0, 0, 0, 0.1)
     ),
     url('../images/pexels-pixabay-164595.jpg');
   background-size: cover;
@@ -32,7 +32,7 @@ h1 {
 }
 
 .resBtn {
-  background-color: darkred;
+  background-color: #99c22a;
   border: none;
   padding: 8px 15px;
   color: #fff;
@@ -42,7 +42,7 @@ h1 {
 }
 
 .resBtn:hover {
-  background-color: darkred;
+  background-color: #a7d32f;
   opacity: 0.95;
   transform: scale(0.97);
 }
@@ -59,7 +59,7 @@ h1 {
 }
 
 .point:hover {
-  color: darkred;
+  color: #a7d32f;
   opacity: 0.8;
 }
 
