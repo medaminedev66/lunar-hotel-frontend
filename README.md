@@ -91,5 +91,6 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
+- Hats off to [Murat Korkmaz](https://www.behance.net/muratk) for designing the awesome template that was used. ✨
 - Microverse for giving us this chance
 - The amazing code reviewers for making us improve every day 👍
