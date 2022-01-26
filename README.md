@@ -8,6 +8,13 @@
 
 <https://lunar-hotel.netlify.app/>
 
+<img src="./screenshots/1.png" alt="screenshot" width="400" height="300" />
+<img src="./screenshots/2.png" alt="screenshot" width="400" height="300" />
+<img src="./screenshots/3.png" alt="screenshot" width="400" height="300" />
+
+<br>
+<br>
+
 # Demo Account
 
 ```json
