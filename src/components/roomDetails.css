@@ -1,0 +1,157 @@
+.upperCase {
+  text-transform: uppercase;
+}
+
+.contain {
+  height: 100vh;
+  width: 100%;
+}
+
+.roomImage {
+  width: 93%;
+  height: 100%;
+  box-shadow: 0 1px 8px rgb(224, 224, 224);
+  border-radius: 5px;
+}
+
+.displayRoom {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+  column-gap: 2rem;
+  background-color: #fff;
+}
+
+.displayTwo {
+  width: 100%;
+  margin-left: 3rem;
+  align-self: center;
+}
+
+.displayThree {
+  padding-left: 0;
+  text-align: center;
+  margin-right: 10px;
+  max-width: 95%;
+}
+
+.displayColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.marginFive {
+  margin-top: 5rem;
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+
+td,
+th {
+  text-align: left;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+th {
+  font-weight: bold;
+}
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding-bottom: 3rem;
+  row-gap: 3rem;
+}
+
+.buttonConfig {
+  background-color: #97bf0f;
+  border: none;
+  padding: 10px 12px;
+  color: #f1f1f1;
+  border-radius: 25px;
+  margin-top: 2rem;
+  box-shadow: 0 1px 8px rgb(224, 224, 224);
+}
+
+.buttonConfig:hover {
+  background-color: #97bf0f;
+  color: #fff;
+  text-decoration: none;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.buttonConfig > h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.items {
+  font-size: 14pt;
+  font-weight: 500;
+}
+
+.badg-odd {
+  background-color: #97bf0f;
+  color: #fff;
+  padding: 10px 1px;
+  border-radius: 5px;
+}
+
+.badg-even {
+  background-color: #97bf0f;
+  color: #fff;
+  padding: 10px 1px;
+  border-radius: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .vis {
+    display: none;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .leftMargin {
+    margin-left: 250px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 80%;
+  }
+
+  .displayTwo {
+    max-width: 90%;
+  }
+
+  .displayThree {
+    width: 45%;
+  }
+}

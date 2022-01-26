@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# LUNAR HOTEL
 
-## Available Scripts
+> This is a react app which will serve as the front end app for our Lunar hotel back end app.
 
-In the project directory, you can run:
+# Demo Link
 
-### `npm start`
+<https://lunar-hotel.netlify.app/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img src="./screenshots/1.png" alt="screenshot" width="400" height="300" />
+<img src="./screenshots/2.png" alt="screenshot" width="400" height="300" />
+<img src="./screenshots/3.png" alt="screenshot" width="400" height="300" />
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br>
+<br>
 
-### `npm test`
+# Demo Account
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```json
+email: testuser@test.com
+password: testpasswd
+```
 
-### `npm run build`
+## The learning objective of this project are
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Create react front end app
+- Connect react front end app to rails back end
+- Use API end point to get data
+- Fetch data from the API
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Built With
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React
+- Redux
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To get a local copy up and running follow these simple example steps.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- [React](https://reactjs.org/tutorial/tutorial.html#prerequisites)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Setup
 
-## Learn More
+- ```git clone git@github.com:medaminedev66/lunar-hotel-frontend.git```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- ```cd lunar-hotel-frontend```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Running The App Locally
 
-### Code Splitting
+- Run `npm install`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Make sure to run our [Rails backend application](https://github.com/medaminedev66/lunar-hotel-backend) first before running the React app so that it takes up the `port 3000`. This is very important as our rails API end point must run on `port 3000` for the API to work.
+- Once the back end is runing on `port 3000` then start the react app and you will be prompted to run the server on another port like `port 3001`. You will receive a message in your terminal like this `Would you like to run the app on another port instead? » (Y/n)`. Please enter `y` so that the react app will start on `port 3001`.
 
-### Analyzing the Bundle Size
+## Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+👤 **Adedamola Shittu**
 
-### Making a Progressive Web App
+- GitHub: [@dammyShittu](https://github.com/DammyShittu/)
+- Twitter: [@aded_shittu](https://twitter.com/aded_shittu/)
+- LinkedIn: [Adedamola Shittu](https://www.linkedin.com/in/adedamolashittu/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+👤 **Amine Smahi**
 
-### Advanced Configuration
+- GitHub: [@medaminedev66](https://github.com/medaminedev66)
+- Twitter: [@medaminesmahi](https://twitter.com/medaminesmahi)
+- LinkedIn: [Mohammed Amine Smahi](https://www.linkedin.com/in/md-amine-smahi/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+👤 **Daniel M. Matongo**
 
-### Deployment
+- GitHub:[@mmmatongo](https://github.com/mmatongo)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/mmatongo)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+👤 **Juliana Ifionu**
 
-### `npm run build` fails to minify
+- GitHub: [@julie-ify](https://github.com/julie-ify)
+- LinkedIn: [Juliana Ifionu](https://www.linkedin.com/in/e-ifionu/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/medaminedev66/lunar-hotel-frontend/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hats off to [Murat Korkmaz](https://www.behance.net/muratk) for designing the awesome template that was used. ✨
+- Microverse for giving us this chance
+- The amazing code reviewers for making us improve every day 👍
