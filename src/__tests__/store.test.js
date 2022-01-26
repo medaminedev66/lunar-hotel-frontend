@@ -15,6 +15,7 @@ describe('store', () => {
         },
         reservationsReducer: [],
         roomsReducer: [],
+        setIdReducer: [],
       },
     );
   });
