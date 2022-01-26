@@ -4,13 +4,23 @@
 
 > This is a react app which will serve as the front end app for our Lunar hotel back end app.
 
+# Demo Link
+
+<https://lunar-hotel.netlify.app/>
+
+# Demo Account
+
+```json
+email: testuser@test.com
+password: testpasswd
+```
+
 ## The learning objective of this project are
 
 - Create react front end app
 - Connect react front end app to rails back end
 - Use API end point to get data
 - Fetch data from the API
-
 
 ## Built With
 
@@ -26,17 +36,17 @@ To get a local copy up and running follow these simple example steps.
 - [React](https://reactjs.org/tutorial/tutorial.html#prerequisites)
 
 ### Setup
+
 - ```git clone git@github.com:medaminedev66/lunar-hotel-frontend.git```
 
 - ```cd lunar-hotel-frontend```
 
-### Running The App
+### Running The App Locally
 
 - Run `npm install`
 
 - Make sure to run our [Rails backend application](https://github.com/medaminedev66/lunar-hotel-backend) first before running the React app so that it takes up the `port 3000`. This is very important as our rails API end point must run on `port 3000` for the API to work.
 - Once the back end is runing on `port 3000` then start the react app and you will be prompted to run the server on another port like `port 3001`. You will receive a message in your terminal like this `Would you like to run the app on another port instead? » (Y/n)`. Please enter `y` so that the react app will start on `port 3001`.
-
 
 ## Authors
 
@@ -61,7 +71,6 @@ To get a local copy up and running follow these simple example steps.
 
 - GitHub: [@julie-ify](https://github.com/julie-ify)
 - LinkedIn: [Juliana Ifionu](https://www.linkedin.com/in/e-ifionu/)
-
 
 ## 🤝 Contributing
 
