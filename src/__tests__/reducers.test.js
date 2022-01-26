@@ -103,13 +103,4 @@ describe('reservationsReducer', () => {
       }),
     ).toEqual([{ id: 1, name: 'test' }]);
   });
-
-  it('should handle CREATE_ROOM', () => {
-    expect(
-      reservationsReducer([], {
-        type: 'reservations/CREATE_ROOM',
-        payload: [{ id: 1, name: 'test' }],
-      }),
-    ).toEqual([[{ id: 1, name: 'test' }]]);
-  });
 });

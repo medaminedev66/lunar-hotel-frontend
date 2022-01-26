@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams, NavLink, useNavigate } from 'react-router-dom';
-import '../roomDetails.css';
+import './roomDetails.css';
 import { Offcanvas } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import NavPanel from './NavPanel';
 import lunar from '../images/lunar.png';
 import { deleteRoom } from '../redux/rooms/rooms';
+import { setId } from '../redux/reservations/setId';
 
 const RoomDetails = () => {
   const rooms = useSelector((state) => state.roomsReducer);
@@ -28,6 +29,10 @@ const RoomDetails = () => {
       navigate('/');
       window.location.reload(true);
     }, 1000);
+  };
+
+  const handleId = (id) => {
+    dispatch(setId(id));
   };
 
   return (
@@ -72,8 +77,8 @@ const RoomDetails = () => {
                     Delete Room
                   </button>
                   <NavLink to="/add_reservation" exact="true">
-                    <button type="button" className="buttonConfig upperClass">
-                      Add Room
+                    <button type="button" onClick={() => handleId(single.id)} className="buttonConfig upperClass">
+                      Reserve A Room
                     </button>
                   </NavLink>
                 </div>

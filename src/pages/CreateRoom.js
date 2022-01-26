@@ -72,8 +72,10 @@ const CreateRoom = () => {
             dispatch(addRoom(values));
             setSubmitting(false);
             resetForm();
-            navigate('/');
-            window.location.reload(true);
+            setTimeout(() => {
+              navigate('/');
+              window.location.reload(true);
+            }, 1000);
           }}
         >
           {({
@@ -205,7 +207,6 @@ const CreateRoom = () => {
 
               <div className="w-md-75 mx-auto d-flex justify-content-center align-items-center mt-4">
                 <Button type="submit" disabled={isSubmitting} className="w-50 mx-auto room-btn">
-                  {isSubmitting && <span className="spinner-border spinner-border-sm mr-1" />}
                   Submit
                 </Button>
               </div>
