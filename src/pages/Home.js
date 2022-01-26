@@ -39,10 +39,9 @@ const Home = () => {
               <h2>Please select a room for reservation</h2>
             )}
             <div className="rooms">
-              {rooms && (
-                rooms.map((room) => (
-                  <RoomItem room={room} key={room.id} rooms={rooms} />
-                )))}
+              {rooms.map((room) => (
+                <RoomItem room={room} key={room.id} rooms={rooms} />
+              ))}
             </div>
           </div>
         </div>
