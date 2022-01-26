@@ -18,7 +18,6 @@ function Reservation(props) {
     });
     return totalRate;
   };
-
   return (
     <div className="reservation">
       <div className="co1">
@@ -38,6 +37,7 @@ function Reservation(props) {
       <div className="co2">
         <div className="room-id tex">
           <h3>Room-id:</h3>
+
           <span>
             №
             {reservation.room_id}

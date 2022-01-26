@@ -5,10 +5,12 @@ import storage from 'redux-persist/lib/storage';
 import { roomsReducer } from './rooms/rooms';
 import authReducer from './auth';
 import { reservationsReducer } from './reservations/reservations';
+import { setIdReducer } from './reservations/setId';
 
 const reducer = combineReducers({
   roomsReducer,
   reservationsReducer,
+  setIdReducer,
   auth: authReducer,
 });
 

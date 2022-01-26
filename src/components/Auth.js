@@ -1,6 +1,6 @@
+/* eslint-disable react/prop-types */
 import { Navigate, useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import PropTypes from 'prop-types';
 import { loadCurrentUser } from '../redux/auth';
 
 const Auth = ({ children }) => {
@@ -24,14 +24,6 @@ export const AuthRoute = ({ children }) => {
   }
 
   return children;
-};
-
-Auth.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
-AuthRoute.propTypes = {
-  children: PropTypes.node.isRequired,
 };
 
 export default Auth;

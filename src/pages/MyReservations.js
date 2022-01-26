@@ -51,7 +51,7 @@ function MyReservation() {
         ;
 
         <div className="reservations">
-          {reservations.map((reservation) => (
+          {reservations && reservations.map((reservation) => (
             <Reservation reservation={reservation} key={reservation.id} />
           ))}
         </div>

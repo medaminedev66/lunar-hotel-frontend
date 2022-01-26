@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { Formik } from 'formik';
@@ -25,6 +25,7 @@ const AddReservation = () => {
   const [show, setShow] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const roomId = useSelector((state) => state.setIdReducer);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -50,7 +51,7 @@ const AddReservation = () => {
             initialValues={{
               check_in: '',
               check_out: '',
-              room_id: 4,
+              room_id: roomId,
             }}
             validationSchema={validationSchema}
             onSubmit={(values, { setSubmitting, resetForm }) => {
