@@ -72,7 +72,10 @@ const RoomDetails = () => {
                       </tr>
                       <tr>
                         <th>Rate</th>
-                        <td>{single.rate}</td>
+                        <td>
+                          $
+                          {single.rate}
+                        </td>
                       </tr>
                     </tbody>
                   </table>
