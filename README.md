@@ -8,9 +8,9 @@
 
 <https://lunar-hotel.netlify.app/>
 
-<img src="./screenshots/1.png" alt="screenshot" width="400" height="300" />
-<img src="./screenshots/2.png" alt="screenshot" width="400" height="300" />
-<img src="./screenshots/3.png" alt="screenshot" width="400" height="300" />
+![lunar-hotel netlify app_](https://user-images.githubusercontent.com/77190203/151373697-8ec631cf-1843-431c-8e7e-c3126f893c03.png)
+![lunar-hotel netlify app_ (1)](https://user-images.githubusercontent.com/77190203/151374007-73d608ed-5353-424c-941f-675dd038760e.png)
+![lunar-hotel netlify app_ (2)](https://user-images.githubusercontent.com/77190203/151374127-c58a59be-8026-4fc3-bbdf-63056ebdac80.png)
 
 <br>
 <br>
