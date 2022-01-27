@@ -36,7 +36,7 @@ const NavPanel = () => {
         <ul>
           {links.map((link) => (
             <li key={link.id} className="nav-link the-nav pt-0 pb-0 float-left text-black">
-              <NavLink activeClassName="active" to={link.path} exact="true">
+              <NavLink activeclassname="active" to={link.path} exact="true">
                 {link.text}
               </NavLink>
             </li>
