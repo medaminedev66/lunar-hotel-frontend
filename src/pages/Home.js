@@ -49,7 +49,7 @@ const Home = () => {
       <Offcanvas className="darkened-off" show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>
-            <h1 className="brand">Lunar Hotel</h1>
+            <img src={lunar} className="lunar-logo" alt="Lunar Hotel Logo" />
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>

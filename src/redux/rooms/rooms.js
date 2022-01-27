@@ -1,4 +1,4 @@
-const END_POINT = 'http://localhost:3000/';
+const END_POINT = 'https://lunar-hotel-backend.herokuapp.com/';
 const API_ROUTE = '/api/v1/';
 
 const FETCH_DATA = 'rooms/FETCH_DATA';

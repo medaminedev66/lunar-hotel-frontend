@@ -44,7 +44,7 @@ const NavPanel = () => {
 
           {isAuthenticated && (
             <li className="log-out">
-              <a href="/" className="nav-link text-black button p-20 text-center" type="button" onClick={handleLogout}>Log Out</a>
+              <a href="/" className="nav-link text-black button text-center" type="button" onClick={handleLogout}>Log Out</a>
             </li>
           )}
         </ul>
