@@ -38,6 +38,10 @@ a {
   text-decoration: none;
 }
 
+.lunar-logo {
+  width: 100%;
+}
+
 .room-item {
   display: flex;
   flex-direction: column;
@@ -76,6 +80,7 @@ menu {
 .home {
   position: relative;
   display: flex;
+  flex-direction: column;
 }
 
 .main {
@@ -86,7 +91,7 @@ menu {
   color: #000;
   margin-top: 5rem;
   text-align: center;
-  font-size: 60px;
+  font-size: 7vw;
   text-transform: uppercase;
 }
 
@@ -156,10 +161,6 @@ input[type="submit"] {
   border: none;
 }
 
-.btn-close {
-  color: #000;
-}
-
 .error {
   border: 2px solid #99c22a;
 }
@@ -185,13 +186,18 @@ input[type="submit"] {
 @media only screen and (min-width: 768px) {
   .nav {
     display: flex;
+    flex-direction: column;
     width: 250px;
     margin: 0 auto;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
     gap: 1.5rem;
-    border: #253439 solid 1px;
+    box-shadow: 1px 0 4px rgb(218, 218, 218);
+  }
+
+  .lunar-logo {
+    width: 100%;
   }
 
   .offcanvas-body {
@@ -200,5 +206,9 @@ input[type="submit"] {
 
   .main {
     margin-left: 250px;
+  }
+
+  .home {
+    flex-direction: row;
   }
 }
