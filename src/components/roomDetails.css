@@ -7,9 +7,9 @@
   width: 100%;
 }
 
-.roomImage {
-  width: 93%;
-  height: 100%;
+.room-image {
+  width: 100%;
+  height: auto;
   box-shadow: 0 1px 8px rgb(224, 224, 224);
   border-radius: 5px;
 }
@@ -25,15 +25,13 @@
   background-color: #fff;
 }
 
-.displayTwo {
+.display-two {
   width: 100%;
-  padding-left: 3rem;
   align-self: center;
 }
 
-.displayThree {
+.display-three {
   width: 100%;
-  padding-left: 3rem;
   text-align: center;
 }
 
@@ -53,6 +51,7 @@
   justify-content: center;
   align-content: center;
   padding-bottom: 3rem;
+  margin: 1rem;
   row-gap: 3rem;
 }
 
@@ -62,7 +61,6 @@
   padding: 10px 12px;
   color: #f1f1f1;
   border-radius: 25px;
-  margin-top: 2rem;
   box-shadow: 0 1px 8px rgb(224, 224, 224);
 }
 
@@ -78,17 +76,21 @@
 }
 
 .badg-odd {
-  background-color: rgb(218, 94, 94);
-  color: #fff;
-  padding: 10px 1px;
-  border-radius: 5px;
+  background-color: rgb(199, 199, 199);
+  padding: 0.8rem 0;
 }
 
 .badg-even {
-  background-color: rgb(202, 34, 34);
-  color: #fff;
-  padding: 10px 1px;
-  border-radius: 5px;
+  background-color: rgb(230, 230, 230);
+  padding: 0.8rem 0;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2em;
 }
 
 @media only screen and (min-width: 768px) {
@@ -97,8 +99,14 @@
   }
 
   .details {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    padding: 3rem 2rem;
+  }
+
+  .buttons {
+    justify-content: space-around;
   }
 
   .leftMargin {
@@ -107,18 +115,28 @@
 }
 
 @media only screen and (min-width: 1200px) {
+  .marginFive {
+    margin-top: 6rem;
+  }
+
   .details {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    min-width: 80%;
+    gap: 2rem;
+    padding: 0 2rem;
   }
 
-  .displayTwo {
-    max-width: 90%;
+  .buttons {
+    justify-content: space-around;
   }
 
-  .displayThree {
-    width: 30%;
+  .display-two {
+    width: 65%;
+  }
+
+  .display-three {
+    width: 35%;
   }
 }

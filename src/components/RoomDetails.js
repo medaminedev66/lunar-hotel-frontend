@@ -15,7 +15,6 @@ const RoomDetails = () => {
   const { id } = useParams();
 
   const room = rooms.filter((r) => r.id === parseInt(id, 10));
-
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -45,51 +44,61 @@ const RoomDetails = () => {
           <img src={lunar} className="lunar-logo" alt="Lunar Hotel Logo" />
           <NavPanel />
         </div>
-        <ul>
-          {room && room.map((single) => (
-            <li key={single.id}>
-              <div className="details marginFive leftMargin">
-                <div className="displayTwo">
-                  <img className="roomImage" src={single.picture} alt="hotel room" />
-                </div>
-                <div className="displayThree">
-                  <h1 className="upperCase">{single.name}</h1>
-                  <p className="mb-2 badg-odd">
-                    <span className="items">City: </span>
-                    <span className="itemsValue">{single.city}</span>
-                  </p>
-                  <p className="mb-2 badg-even">
-                    <span className="items">Room rate: </span>
-                    <span className="itemsValue">
-                      $
-                      {single.rate}
-                    </span>
-                  </p>
-                  <p className="mb-2 badg-odd">
-                    <span className="items">Room type: </span>
-                    <span className="itemsValue">{single.room_type}</span>
-                  </p>
-                  <p className="mb-2 badg-even">
-                    <span className="items">Amenities: </span>
-                    <span className="itemsValue">{single.amenities}</span>
-                  </p>
-                  <button type="button" className="buttonConfig upperClass" onClick={() => handleClick(single.id)}>
-                    Delete Room
-                  </button>
-                  <NavLink to="/add_reservation" exact="true">
-                    <button type="button" onClick={() => handleId(single.id)} className="buttonConfig upperClass">
-                      Reserve A Room
-                    </button>
-                  </NavLink>
-                </div>
-              </div>
-            </li>
-          ))}
-        </ul>
+        <div className="details marginFive leftMargin">
+          <div className="display-two">
+            <img
+              className="room-image"
+              src={room[0].picture}
+              alt="hotel room"
+            />
+          </div>
+          <div className="display-three">
+            <h1 className="upperCase">{room[0].name}</h1>
+            <p className="badg-odd">
+              <span className="items">City: </span>
+              <span className="itemsValue">{room[0].city}</span>
+            </p>
+            <p className="badg-even">
+              <span className="items">Room rate: </span>
+              <span className="itemsValue">
+                $
+                {room[0].rate}
+              </span>
+            </p>
+            <p className="badg-odd">
+              <span className="items">Room type: </span>
+              <span className="itemsValue">{room[0].room_type}</span>
+            </p>
+            <p className="badg-even">
+              <span className="items">Amenities: </span>
+              <span className="itemsValue">{room[0].amenities}</span>
+            </p>
+            <div className="buttons">
+              <button
+                type="button"
+                className="buttonConfig upperClass"
+                onClick={() => handleClick(room[0].id)}
+              >
+                Delete Room
+              </button>
+              <NavLink to="/add_reservation" exact="true">
+                <button
+                  type="button"
+                  onClick={() => handleId(room[0].id)}
+                  className="buttonConfig upperClass"
+                >
+                  Reserve A Room
+                </button>
+              </NavLink>
+            </div>
+          </div>
+        </div>
       </section>
       <Offcanvas className="darkened-off" show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title><img src={lunar} className="lunar-logo-m" alt="Lunar Hotel Logo" /></Offcanvas.Title>
+          <Offcanvas.Title>
+            <img src={lunar} className="lunar-logo-m" alt="Lunar Hotel Logo" />
+          </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           <NavPanel />
